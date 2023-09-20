@@ -1,3 +1,4 @@
+import { ModeToggle } from '@/components/mode-toggle'
 import '@/public/css/globals.css'
 import { Inter } from 'next/font/google'
 
@@ -20,10 +21,12 @@ export default function MainLayout({
                     </div>
                 </header>
                 {children}
-                <footer>
+                <footer className='flex justify-between content-center p-20'>
                     <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
                         copyright@2023. All the rights are reserved.
                     </div>
+
+                    <ModeToggle />
                 </footer>
             </body>
         </html>
