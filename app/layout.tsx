@@ -5,6 +5,8 @@ import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
+const env = process.env;
+
 export const metadata: Metadata = {
   title: 'Ajay Singh',
   description: 'Main website for the Portfolio.',
@@ -16,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
+    <html lang="en" suppressHydrationWarning={env.NODE_ENV !== "production"}>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"

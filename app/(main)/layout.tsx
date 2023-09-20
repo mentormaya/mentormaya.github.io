@@ -1,8 +1,5 @@
 import { ModeToggle } from '@/components/mode-toggle'
 import '@/public/css/globals.css'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function MainLayout({
     children,
