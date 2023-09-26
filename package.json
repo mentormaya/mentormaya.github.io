@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mentormaya/helper": "^1.0.0",
     "@radix-ui/react-dropdown-menu": "^2.0.5",
     "@radix-ui/react-slot": "^1.0.2",
     "@types/node": "20.6.2",
@@ -32,6 +31,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "@mentormaya/helper": "^1.0.1",
     "eslint-config-prettier": "^9.0.0"
   }
 }
