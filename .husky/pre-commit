@@ -1,16 +1,16 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo "Trying to generating .sample.env file..."
+echo "\n🎡🧬Trying to generating .sample.env file..."
 helper gen-env -s
 
 # if [ $? -eq 0 ]; then
 #   echo ".sample.env file generated."
 # fi
-echo "Adding all files to the git stage"
+echo "\n➕🧋Adding all files to the git stage"
 git add .
 
-echo "Linting and fixing the code issues"
+echo "\n🖇️📙Linting and fixing the code issues"
 npx lint-staged
 
-echo "Tests are comming soon here!"
+echo "\n🧪🍷Tests are comming soon here!"
