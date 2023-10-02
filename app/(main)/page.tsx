@@ -8,7 +8,7 @@ export default function Home() {
         quas exercitationem incidunt, amet, soluta abc aliquid veniam nesciunt.
         Debitis a ducimus, at sed distinctio odit tempora, laborum illo veniam
         rerum eos obcaecati itaque aspernatur qui vitae optio necessitatibus.
-        Quaerat nihil aut unde, eveniet dolores, temporibus necessitatibus
+        Quaerat nihil aut unde, eviet dolores, temporibus necessitatibus
         quisquam placeat nemo tenetur laborum quibusdam reiciendis! Asperiores
         quas nam quasi excepturi earum. Et voluptatum fugit eaque repudiandae
         eligendi cum praesentium, sapiente sed rerum cumque? Fugit perspiciatis
