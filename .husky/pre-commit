@@ -1,4 +1,14 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+echo "Trying to generating .sample.env file..."
+helper gen-env -s
+
+if [ $? -eq 0 ]; then
+  echo ".sample.env file generated."
+fi
+
+echo "Linting and fixing the code issues"
 npx lint-staged
+
+echo "Tests are comming soon here!"
