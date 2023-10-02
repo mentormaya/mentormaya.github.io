@@ -1,10 +1,13 @@
-const path = require("path");
-
-const buildEslintCommand = (filenames) =>
-  `next lint --fix --file ${filenames
-    .map((f) => path.relative(process.cwd(), f))
-    .join(" --file ")}`;
-
 module.exports = {
-  "*.{js,jsx,ts,tsx}": [buildEslintCommand],
+  // this will check Typescript files
+  "**/*.(ts|tsx)": () => "npx tsc --noEmit",
+
+  // This will lint and format TypeScript and                                             //JavaScript files
+  "**/*.(ts|tsx|js)": filenames => [
+    `npm run lint:fix ${filenames.join(" ")}`,
+    `npm run format ${filenames.join(" ")}`,
+  ],
+
+  // this will Format MarkDown and JSON
+  "**/*.(md|json)": filenames => `npm run format ${filenames.join(" ")}`,
 };
