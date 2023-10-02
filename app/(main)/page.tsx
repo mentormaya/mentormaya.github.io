@@ -26,10 +26,10 @@ export default function Home() {
         ullam adipisci aperiam! Laborum dicta placeat iure excepturi.
         Blanditiis, dolorem accusantium molestias magnam dolorum quod deleniti
         culpa iusto, quasi ut facere? Reab autem minima tempore magnam quaerat
-        facere ipsum porro atqu asomehting aliquam fugit expedita repudiandae
-        nulla minus hic vitae voluptas amet velit at! Molestias veritatis natus
-        illo suscipit reiciendis! Odio, unde nemo asd explicabo veniam culpa
-        dolores ratione? Iusto excepturi illo eveniet!.
+        facere ipsum porro something atqu asomehting aliquam fugit expedita
+        repudiandae nulla minus hic vitae voluptas amet velit at! Molestias
+        veritatis natus illo suscipit reiciendis! Odio, unde nemo asd explicabo
+        veniam culpa dolores ratione? Iusto excepturi illo eveniet!.
       </div>
     </main>
   );
