@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="container p-4">
+    <main className="container py-4">
       <div className="grid text-justify">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam earum
         expedita accusantium autem facilis omnis, eveniet voluptatem libero

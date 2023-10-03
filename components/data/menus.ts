@@ -4,6 +4,7 @@ import {
   MailCheck,
   Newspaper,
   UserSquare2,
+  Workflow,
 } from "lucide-react";
 
 export const mainMenu = [
@@ -30,6 +31,18 @@ export const mainMenu = [
     name: "contact",
     active: false,
     icon: UserSquare2,
+  },
+  {
+    label: "Portfolio",
+    name: "portfolio",
+    active: false,
+    icon: Workflow,
+  },
+  {
+    label: "Utilites",
+    name: "utilites",
+    active: false,
+    icon: Workflow,
   },
 ];
 
