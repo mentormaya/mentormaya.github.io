@@ -2,9 +2,10 @@ import React from "react";
 import { ThemeProvider } from "@/providers/theme-provider";
 import "@/public/css/globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
+import { cn } from "@/helper/utils";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 const { env } = process;
 
@@ -20,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning={env.NODE_ENV !== "production"}>
-      <body className={inter.className}>
+      <body className={cn(`min-h-full`, montserrat.className)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

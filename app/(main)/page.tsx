@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between p-24">
+    <main className="container p-4">
       <div className="grid text-justify">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam earum
         expedita accusantium autem facilis omnis, eveniet voluptatem libero
@@ -18,18 +18,6 @@ export default function Home() {
         dignissimos illum aliquid, repudiandae eveniet deserunt nesciunt sit
         quos ratione atque quam est? Quaerat, quod! Labore culpa ea corporis
         quos consectetur, atque fugiat nostrum illum, consequuntur qui omnis.
-        Nulla officia ratione voluptatem animi libero beatae architecto officiis
-        voluptates inventore. Reprehenderit non dolorem aut omnis ipsa fuga
-        autem quia consectetur exercitationem earum animi, repellat modi libero
-        sint explicabo facere aliquid quisquam repellendus nostrum recusandae
-        eum distinctio consequuntur minima rerum. Voluptatibus odit a inventore
-        ullam adipisci aperiam! Laborum dicta placeat iure excepturi.
-        Blanditiis, dolorem accusantium molestias magnam dolorum quod deleniti
-        culpa iusto, quasi ut facere? Reab autem minima tempore magnam quaerat
-        facere ipsum porro something atqu asomehting aliquam fugit expedita
-        repudiandae nulla minus as hic vitae voluptas amet velit at! Molestias
-        veritatis natus illo suscipit reiciendis! Odio, unde nemo asd explicabo
-        veniam culpa dolores ratione? Iusto excepturi illo eveniet!.
       </div>
     </main>
   );
