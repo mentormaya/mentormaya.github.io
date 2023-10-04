@@ -11,7 +11,7 @@ export default function MainLayout({
   return (
     <>
       <Header />
-      {children}
+      <div className="mt-[6rem]">{children}</div>
       <Footer />
     </>
   );

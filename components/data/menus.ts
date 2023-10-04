@@ -1,56 +1,78 @@
 import {
   BadgeInfo,
+  Download,
   Home,
+  LucideIcon,
   MailCheck,
   Newspaper,
+  QrCode,
   UserSquare2,
   Workflow,
 } from "lucide-react";
 
-export const mainMenu = [
+export interface MenuProps {
+  label: string;
+  link: string;
+  icon: LucideIcon;
+  submenu?: {
+    label: string;
+    link: string;
+    icon: LucideIcon;
+    description?: string;
+  }[];
+}
+
+export const mainMenu: MenuProps[] = [
   {
     label: "Home",
-    name: "home",
-    active: true,
+    link: "home",
     icon: Home,
   },
   {
     label: "About",
-    name: "about",
-    active: false,
+    link: "about",
     icon: BadgeInfo,
   },
   {
     label: "Blog",
-    name: "blog",
-    active: false,
+    link: "blog",
     icon: Newspaper,
   },
   {
     label: "Contact",
-    name: "contact",
-    active: false,
+    link: "contact",
     icon: UserSquare2,
   },
   {
     label: "Portfolio",
-    name: "portfolio",
-    active: false,
+    link: "portfolio",
     icon: Workflow,
   },
   {
     label: "Utilites",
-    name: "utilites",
-    active: false,
+    link: "utilites",
     icon: Workflow,
+    submenu: [
+      {
+        label: "Downloads",
+        link: "downloads",
+        icon: Download,
+        description: "Download the available content of your choice for free.",
+      },
+      {
+        label: "QR Code Generator",
+        link: "qr-code-generator",
+        icon: QrCode,
+        description: "Generate a QR Code for variety of purposes.",
+      },
+    ],
   },
 ];
 
 export const rightMenu = [
   {
     label: "Get In Touch",
-    name: "subscribe",
-    active: false,
+    link: "#",
     icon: MailCheck,
   },
 ];
