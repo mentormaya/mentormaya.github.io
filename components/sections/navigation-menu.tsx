@@ -99,7 +99,7 @@ function NavMenu({ projects }: NavProps) {
                   className={cn(
                     "bg-transparent",
                     active &&
-                      "bg-zinc-100 dark:bg-zinc-800 shadow-inner shadow-zinc-400"
+                      "bg-zinc-100 dark:bg-zinc-800 shadow-inner shadow-zinc-400 dark:shadow-zinc-900"
                   )}
                 >
                   <Icon className="h-4 w-4 mr-2" />
@@ -141,7 +141,7 @@ function NavMenu({ projects }: NavProps) {
                     navigationMenuTriggerStyle(),
                     "bg-transparent",
                     active &&
-                      "bg-zinc-100 dark:bg-zinc-800 shadow-inner shadow-zinc-400"
+                      "bg-zinc-100 dark:bg-zinc-800 shadow-inner shadow-zinc-400 dark:shadow-zinc-900"
                   )}
                 >
                   <Icon className="h-4 w-4 mr-2" />
