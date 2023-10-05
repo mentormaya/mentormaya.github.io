@@ -4,6 +4,8 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { Separator } from "@/components/ui/separator";
+
 import { mainMenu } from "@/components/data/menus";
 import { cn } from "@/helper/utils";
 import {
@@ -15,8 +17,8 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { Info, LucideIcon } from "lucide-react";
-import { RepoProps } from "@/actions/projects";
+import { GitFork, Info, LucideIcon, Workflow } from "lucide-react";
+import { ProjectProps } from "../props/projects";
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
@@ -36,9 +38,14 @@ const ListItem = React.forwardRef<
         >
           <Icon className="h-10 w-10 m-auto" />
           <div className="text-bold font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
+          {children && (
+            <>
+              <Separator />
+              <p className="line-clamp-2 text-sm leading-snug text-muted-foreground text-left">
+                {children}
+              </p>
+            </>
+          )}
         </a>
       </NavigationMenuLink>
     </li>
@@ -47,18 +54,44 @@ const ListItem = React.forwardRef<
 ListItem.displayName = "ListItem";
 
 interface NavProps {
-  projects: RepoProps[];
+  projects: ProjectProps[];
 }
 
 function NavMenu({ projects }: NavProps) {
   const pathname = usePathname();
 
+  const submenus = projects.map(project => {
+    return {
+      label: project.name,
+      link: project.home,
+      icon: GitFork,
+      description: project.description,
+    };
+  });
+
+  mainMenu[mainMenu.findIndex(menu => menu.link === "portfolio")] = {
+    label: "Portfolio",
+    link: "portfolio",
+    icon: Workflow,
+    submenu: [
+      {
+        label: "All Projects",
+        link: "projects",
+        icon: GitFork,
+        description:
+          "Go to the Projects page where you can expore the projects listed here in more details.",
+      },
+      ...submenus,
+    ],
+  };
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
         {mainMenu.map(menu => {
+          const Icon = menu.icon;
           const active =
-            menu.link === "home"
+            menu.link === "/"
               ? pathname === "/" || pathname.includes(menu.link)
               : pathname.includes(menu.link);
           if (menu.submenu) {
@@ -70,10 +103,16 @@ function NavMenu({ projects }: NavProps) {
                     active && "bg-zinc-100 dark:bg-zinc-800"
                   )}
                 >
+                  <Icon className="h-4 w-4 mr-2" />
                   {menu.label}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:grid-cols-2">
+                  <ul
+                    className={cn(
+                      "grid w-[650px] gap-2 p-4 md:grid-cols-3 overflow-y-auto",
+                      menu.submenu.length > 3 && "h-96"
+                    )}
+                  >
                     {menu.submenu.map(submenu => {
                       return (
                         <ListItem
@@ -101,6 +140,7 @@ function NavMenu({ projects }: NavProps) {
                     active && "bg-zinc-100 dark:bg-zinc-800"
                   )}
                 >
+                  <Icon className="h-4 w-4 mr-2" />
                   {menu.label}
                 </NavigationMenuLink>
               </Link>

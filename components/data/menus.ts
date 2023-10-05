@@ -6,6 +6,7 @@ import {
   MailCheck,
   Newspaper,
   QrCode,
+  Settings,
   UserSquare2,
   Workflow,
 } from "lucide-react";
@@ -25,7 +26,7 @@ export interface MenuProps {
 export const mainMenu: MenuProps[] = [
   {
     label: "Home",
-    link: "home",
+    link: "/",
     icon: Home,
   },
   {
@@ -51,7 +52,7 @@ export const mainMenu: MenuProps[] = [
   {
     label: "Utilites",
     link: "utilites",
-    icon: Workflow,
+    icon: Settings,
     submenu: [
       {
         label: "Downloads",

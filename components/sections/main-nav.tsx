@@ -9,17 +9,22 @@ import { getProjects } from "@/actions/projects";
 import { Button } from "../ui/button";
 import { ModeToggle } from "../mode-toggle";
 import NavMenu from "./navigation-menu";
+import { ProjectProps } from "../props/projects";
 
 interface MainNavProps {
   className?: string;
 }
 
 async function MainNav({ className }: MainNavProps) {
-  const projects = await getProjects(
-    "https://api.github.com/users/mentormaya/repos"
+  const projects = (await getProjects("mentormaya")).map(
+    (project: ProjectProps) => {
+      return {
+        name: project.name,
+        home: project.home,
+        description: project.description,
+      };
+    }
   );
-
-  console.log(projects);
 
   return (
     <div

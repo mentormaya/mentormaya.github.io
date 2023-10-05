@@ -6,6 +6,7 @@ export interface RepoProps {
   full_name: string;
   html_url: string;
   private: boolean;
+  fork: boolean;
   owner: {
     login: string;
     avatar_url: string;
@@ -18,10 +19,14 @@ export interface RepoProps {
     name: string;
     url: string;
   };
+  releases_url?: string;
+  deployments_url?: string;
+  created_at?: string;
+  updated_at?: string;
 }
 
-export async function getProjects(url: string) {
-  const user = url.split("/")[4];
+export async function getProjects(user: string) {
+  const url = `https://api.github.com/users/${user}/repos`;
   const res = await fetch(url);
 
   if (!res.ok) {
@@ -31,7 +36,14 @@ export async function getProjects(url: string) {
   const all = await res.json();
 
   return all
-    .filter((repo: RepoProps) => repo.owner.login === user)
+    .filter(
+      (repo: RepoProps) =>
+        !repo.fork && // filters projects that are forked from another developers
+        repo.name !== user && // filters own repo profile
+        repo.name !== "Sankatmochan" && // filters private repo for me only
+        repo.name !== "PHP" && // filters own repo for PHP Classes examples
+        repo.owner.login === user // filters only projects that has owner of self
+    )
     .map((repo: RepoProps) => {
       return {
         id: repo.id,
@@ -50,6 +62,10 @@ export async function getProjects(url: string) {
             ? repo.license
             : { name: repo.license }
           : repo.license,
+        releases_url: repo.releases_url,
+        deployments_url: repo.deployments_url,
+        created_at: repo.created_at,
+        updated_at: repo.updated_at,
       };
     });
 }
