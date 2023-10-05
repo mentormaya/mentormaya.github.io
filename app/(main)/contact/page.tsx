@@ -1,9 +1,9 @@
 import { Separator } from "@/components/ui/separator";
 
-export default function Home() {
+export default function Contact() {
   return (
     <main className="container py-4">
-      <h1>Welcome to my website!</h1>
+      <h1>Contact Me!</h1>
       <Separator />
       <div className="grid text-justify">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam earum

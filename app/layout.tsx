@@ -4,6 +4,8 @@ import "@/public/css/globals.css";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import { cn } from "@/helper/utils";
+import Header from "@/components/sections/header";
+import Footer from "@/components/sections/footer";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -28,7 +30,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Header />
+          <div className="mt-[6rem]">{children}</div>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

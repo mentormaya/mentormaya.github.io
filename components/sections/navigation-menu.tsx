@@ -76,7 +76,7 @@ function NavMenu({ projects }: NavProps) {
     submenu: [
       {
         label: "All Projects",
-        link: "projects",
+        link: "portfolio",
         icon: GitFork,
         description:
           "Go to the Projects page where you can expore the projects listed here in more details.",
@@ -91,16 +91,15 @@ function NavMenu({ projects }: NavProps) {
         {mainMenu.map(menu => {
           const Icon = menu.icon;
           const active =
-            menu.link === "/"
-              ? pathname === "/" || pathname.includes(menu.link)
-              : pathname.includes(menu.link);
+            menu.link === "/" ? pathname === "/" : pathname.includes(menu.link);
           if (menu.submenu) {
             return (
               <NavigationMenuItem key={menu.link}>
                 <NavigationMenuTrigger
                   className={cn(
                     "bg-transparent",
-                    active && "bg-zinc-100 dark:bg-zinc-800"
+                    active &&
+                      "bg-zinc-100 dark:bg-zinc-800 shadow-inner shadow-zinc-400"
                   )}
                 >
                   <Icon className="h-4 w-4 mr-2" />
@@ -120,8 +119,8 @@ function NavMenu({ projects }: NavProps) {
                           title={submenu.label}
                           href={
                             menu.link !== "portfolio"
-                              ? `${menu.link}/${submenu.link}`
-                              : submenu.link
+                              ? `/${menu.link}/${submenu.link}`
+                              : `/${submenu.link}`
                           }
                           icon={submenu.icon}
                         >
@@ -136,12 +135,13 @@ function NavMenu({ projects }: NavProps) {
           }
           return (
             <NavigationMenuItem key={menu.link}>
-              <Link href={menu.link} legacyBehavior passHref>
+              <Link href={`/${menu.link}`} legacyBehavior passHref>
                 <NavigationMenuLink
                   className={cn(
                     navigationMenuTriggerStyle(),
                     "bg-transparent",
-                    active && "bg-zinc-100 dark:bg-zinc-800"
+                    active &&
+                      "bg-zinc-100 dark:bg-zinc-800 shadow-inner shadow-zinc-400"
                   )}
                 >
                   <Icon className="h-4 w-4 mr-2" />
