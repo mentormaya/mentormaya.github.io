@@ -26,7 +26,7 @@ const ListItem = React.forwardRef<
 >(({ className, title, icon, children, ...props }, ref) => {
   const Icon = icon ?? Info;
   return (
-    <li className="border border-zinc-300 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800">
+    <li className="border border-zinc-300 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:shadow-md">
       <NavigationMenuLink asChild>
         <a
           ref={ref}
@@ -118,7 +118,11 @@ function NavMenu({ projects }: NavProps) {
                         <ListItem
                           key={submenu.link}
                           title={submenu.label}
-                          href={submenu.link}
+                          href={
+                            menu.link !== "portfolio"
+                              ? `${menu.link}/${submenu.link}`
+                              : submenu.link
+                          }
                           icon={submenu.icon}
                         >
                           {submenu.description}

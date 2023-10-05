@@ -66,6 +66,12 @@ export const mainMenu: MenuProps[] = [
         icon: QrCode,
         description: "Generate a QR Code for variety of purposes.",
       },
+      {
+        label: "Resume Generator",
+        link: "resume-generator",
+        icon: UserSquare2,
+        description: "Generate a Resume/CV with your personal Information.",
+      },
     ],
   },
 ];
