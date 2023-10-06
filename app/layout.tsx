@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "@/providers/theme-provider";
-import "@/public/css/globals.css";
+import "@/public/css/global.css";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import { cn } from "@/helper/utils";
@@ -31,7 +31,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <div className="mt-[6rem]">{children}</div>
+          <div className="mt-[7rem]">{children}</div>
           <Footer />
         </ThemeProvider>
       </body>

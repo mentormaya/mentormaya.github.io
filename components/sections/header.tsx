@@ -3,7 +3,17 @@ import Image from "next/image";
 
 import MainNav from "@/components/sections/main-nav";
 import TopBar from "./top-bar";
-import FlashMessages from "./flash-messages";
+import Slider from "./slider";
+
+const posts = [
+  "This is the first Post",
+  "This is the second Post",
+  "This is the third Post",
+  "This is the fourth Post",
+  "This is the fifth Post",
+  "This is the sixth Post",
+  "This is the seventh Post",
+];
 
 function Header() {
   return (
@@ -22,7 +32,7 @@ function Header() {
           <MainNav />
         </div>
       </div>
-      <FlashMessages />
+      <Slider type="text" content={posts} />
     </header>
   );
 }
