@@ -22,6 +22,10 @@ const posts = [
     text: "Sample content for the scroller test 🥳",
     url: "sample-content-for-the-scroller-test",
   },
+  {
+    text: "नेपाली युनिकाेड चेक 🥳",
+    url: "nepali-unicode-test",
+  },
 ];
 
 function Header() {
