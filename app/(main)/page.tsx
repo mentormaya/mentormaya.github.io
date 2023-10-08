@@ -1,28 +1,15 @@
-import { Separator } from "@/components/ui/separator";
+import Heading from "@/components/sections/heading";
 
 export default function Home() {
   return (
     <main className="container py-4">
-      <h1>Welcome to my website!</h1>
-      <Separator />
-      <div className="grid text-justify">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam earum
-        expedita accusantium autem facilis omnis, eveniet voluptatem libero
-        eaque, quo natus. Pariatur ullam necessitatibus aperiam dolorem itaque,
-        quas exercitationem incidunt, amet, soluta abc aliquid veniam nesciunt.
-        Debitis a ducimus, at sed distinctio odit tempora, laborum illo veniam
-        rerum eos obcaecati itaque aspernatur qui vitae optio necessitatibus.
-        Quaerat nihil aut unde, eviet dolores, temporibus necessitatibus
-        quisquam placeat nemo tenetur laborum quibusdam reiciendis! Asperiores
-        quas nam quasi excepturi earum. Et voluptatum fugit eaque repudiandae
-        eligendi cum praesentium, sapiente sed rerum cumque? Fugit perspiciatis
-        maiores voluptas dolore, laboriosam vero illo eaque, exercitationem
-        molestiae ex aut maxime optio! Perspiciatis placeat natus inventore
-        recusandae dicta ea quisquam voluptate laborum at incidunt esse
-        dignissimos illum aliquid, repudiandae eveniet deserunt nesciunt sit
-        quos ratione atque quam est? Quaerat, quod! Labore culpa ea corporis
-        quos consectetur, atque fugiat nostrum illum, consequuntur qui omnis.
-      </div>
+      <section>
+        <Heading title="Home Page" />
+      </section>
+      <section className="flex justify-between content-center">
+        <div className="bg-zinc-300 w-full">Hero Section</div>
+        <div className="bg-zinc-200 w-full">Image</div>
+      </section>
     </main>
   );
 }
