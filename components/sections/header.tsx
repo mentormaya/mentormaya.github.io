@@ -6,13 +6,22 @@ import TopBar from "./top-bar";
 import Slider from "./slider";
 
 const posts = [
-  "This is the first Post",
-  "This is the second Post",
-  "This is the third Post",
-  "This is the fourth Post",
-  "This is the fifth Post",
-  "This is the sixth Post",
-  "This is the seventh Post",
+  {
+    text: "Something random to be published. 📬",
+    url: "something-random-to-be-published",
+  },
+  {
+    text: "Testing posts scroller! 🍷",
+    url: "testing-posts-scroller",
+  },
+  {
+    text: "What do you think about this? 🤔",
+    url: "what-do-you-think-about-this",
+  },
+  {
+    text: "Sample content for the scroller test 🥳",
+    url: "sample-content-for-the-scroller-test",
+  },
 ];
 
 function Header() {
@@ -32,7 +41,7 @@ function Header() {
           <MainNav />
         </div>
       </div>
-      <Slider type="text" content={posts} />
+      <Slider type="post" content={posts} />
     </header>
   );
 }

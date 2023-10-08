@@ -62,7 +62,7 @@ export const mainMenu: MenuProps[] = [
       },
       {
         label: "QR Code Generator",
-        link: "qr-code-generator",
+        link: "qrcode-generator",
         icon: QrCode,
         description: "Generate a QR Code for variety of purposes.",
       },
