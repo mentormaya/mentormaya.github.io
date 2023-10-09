@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo -e "\n🎡🧬 Trying to generating .sample.env file..."
+echo -e "\n🎡🧬 Trying to generate .sample.env file..."
 helper gen-env -s
 
 # if [ $? -eq 0 ]; then
