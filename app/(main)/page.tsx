@@ -1,4 +1,9 @@
 import Heading from "@/components/sections/heading";
+import Hero from "@/components/sections/hero";
+
+const options = ["Ajay", "Engineer", "Designer", "Enthusiast"];
+const description =
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sit optio repellat reiciendis, aliquam quisquam molestiae saepe delectus, eaque maiores dolore unde, quas soluta quos.";
 
 export default function Home() {
   return (
@@ -6,10 +11,7 @@ export default function Home() {
       <section>
         <Heading title="Home Page" />
       </section>
-      <section className="flex justify-between content-center">
-        <div className="bg-zinc-300 w-full">Hero Section</div>
-        <div className="bg-zinc-200 w-full">Image</div>
-      </section>
+      <Hero options={options} description={description} />
     </main>
   );
 }
