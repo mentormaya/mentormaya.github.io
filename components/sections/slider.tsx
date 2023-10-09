@@ -88,10 +88,21 @@ function Elements({ type, content, variant }: ElementProps) {
       return (
         <>
           {content.map(item => (
-            <Item item={item.text} variant={variant} link={item.url} />
+            <Item
+              key={item.url ?? item.text}
+              item={item.text}
+              variant={variant}
+              link={item.url}
+            />
           ))}
           {content.map(item => (
-            <Item item={item.text} variant={variant} link={item.url} hidden />
+            <Item
+              key={item.url ?? item.text}
+              item={item.text}
+              variant={variant}
+              link={item.url}
+              hidden
+            />
           ))}
         </>
       );
