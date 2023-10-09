@@ -1,6 +1,7 @@
-import { cn } from "@/helper/utils";
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+
+import { cn } from "@/helper/utils";
 
 interface Content {
   text: string;
@@ -125,7 +126,7 @@ function Slider({
   return (
     <div
       className={cn(
-        "scroller mx-12 max-w-full",
+        "scroller mx-12 container m-auto",
         // "border border-red-600", // debugging option
         animated &&
           "overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_10%,_black_90%,transparent_100%)]"
