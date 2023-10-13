@@ -1,5 +1,15 @@
 /* eslint-disable global-require */
 /** @type {import('tailwindcss').Config} */
+
+const withOpacity = color => {
+  return opacity => {
+    if (opacity) {
+      return `rgba(var(--${color}), ${opacity})`;
+    }
+    return `rgb(var(--${color}))`;
+  };
+};
+
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -17,6 +27,18 @@ module.exports = {
       },
     },
     extend: {
+      textColor: {
+        skin: {
+          white: withOpacity("color-text-white"),
+          dark: withOpacity("color-text-dark"),
+          primary: withOpacity("color-text-primary"),
+          "primary-muted": withOpacity("color-text-primary-muted"),
+          secondary: withOpacity("color-text-secondary"),
+          "secondary-muted": withOpacity("color-text-secondary-muted"),
+          success: withOpacity("color-text-success"),
+          danger: withOpacity("color-text-danger"),
+        },
+      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
