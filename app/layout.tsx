@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning={env.NODE_ENV !== "production"}>
-      <body className={cn(`min-h-full`, montserrat.className)}>
+      <body className={cn(`min-h-full dark:bg-zinc-800`, montserrat.className)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

@@ -48,7 +48,9 @@ const Item = async ({
       className={cn(
         "rounded-md px-4 shadow-md cursor-pointer",
         "hover:underline",
-        style && variant === "SUCCESS" && "bg-green-200 text-green-500",
+        style &&
+          variant === "SUCCESS" &&
+          "bg-green-200 text-green-500 dark:bg-green-300 dark:text-green-700",
         style && variant === "SUCCESS" && border && "border border-green-500",
         style &&
           variant === "DANGER" &&

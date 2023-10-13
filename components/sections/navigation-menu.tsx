@@ -26,7 +26,7 @@ const ListItem = React.forwardRef<
 >(({ className, title, icon, children, ...props }, ref) => {
   const Icon = icon ?? Info;
   return (
-    <li className="border border-zinc-300 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:shadow-md">
+    <li className="border border-zinc-300 rounded-md hover:bg-zinc-100 dark:bg-zinc-800 dark:hover:bg-zinc-900 hover:shadow-md">
       <NavigationMenuLink asChild>
         <a
           ref={ref}
@@ -97,9 +97,9 @@ function NavMenu({ projects }: NavProps) {
               <NavigationMenuItem key={menu.link}>
                 <NavigationMenuTrigger
                   className={cn(
-                    "bg-transparent",
+                    "bg-zinc-300 dark:bg-zinc-700 dark:hover:bg-zinc-800",
                     active &&
-                      "bg-zinc-100 dark:bg-zinc-800 shadow-inner shadow-zinc-400 dark:shadow-zinc-900"
+                      "bg-zinc-100 dark:bg-zinc-800 dark:hover:bg-zinc-900 shadow-inner shadow-zinc-400 dark:shadow-zinc-950"
                   )}
                 >
                   <Icon className="h-4 w-4 mr-2" />
@@ -108,7 +108,7 @@ function NavMenu({ projects }: NavProps) {
                 <NavigationMenuContent>
                   <ul
                     className={cn(
-                      "grid w-[650px] gap-2 p-4 md:grid-cols-3 overflow-y-auto",
+                      "grid w-[650px] gap-2 p-4 md:grid-cols-3 overflow-y-auto dark:bg-zinc-900",
                       menu.submenu.length > 3 && "h-96"
                     )}
                   >
@@ -139,9 +139,9 @@ function NavMenu({ projects }: NavProps) {
                 <NavigationMenuLink
                   className={cn(
                     navigationMenuTriggerStyle(),
-                    "bg-transparent",
+                    "bg-zinc-300 dark:bg-zinc-700 dark:hover:bg-zinc-800",
                     active &&
-                      "bg-zinc-100 dark:bg-zinc-800 shadow-inner shadow-zinc-400 dark:shadow-zinc-900"
+                      "bg-zinc-100 dark:bg-zinc-800 dark:hover:bg-zinc-900 dark shadow-inner shadow-zinc-400 dark:shadow-zinc-950"
                   )}
                 >
                   <Icon className="h-4 w-4 mr-2" />

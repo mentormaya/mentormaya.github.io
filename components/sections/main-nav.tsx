@@ -42,7 +42,7 @@ async function MainNav({ className }: MainNavProps) {
               asChild
               key={menu.link}
               variant="outline"
-              className="rounded-full border-zinc-400 dark:border-zinc-300"
+              className="rounded-full border-zinc-400 dark:border-zinc-300  dark:bg-zinc-800 dark:hover:bg-zinc-900 shadow-inner shadow-zinc-400 dark:shadow-zinc-950"
             >
               <Link href={menu.link}>
                 <Icon className="h-4 w-4 mr-2" />
