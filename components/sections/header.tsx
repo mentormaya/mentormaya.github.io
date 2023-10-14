@@ -32,7 +32,7 @@ function Header() {
   return (
     <header className="fixed top-0 w-full rounded shadow-md shadow-zinc-500">
       <TopBar />
-      <div className="bg-zinc-300 dark:bg-zinc-700 shadow-sm shadow-zinc-500">
+      <div className="bg-primary-fill-light  shadow-sm shadow-zinc-500">
         <div className="container navigation flex content-center justify-start gap-4 py-1">
           <div className="brand mr-4 px-2 flex">
             <Image

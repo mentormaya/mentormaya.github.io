@@ -4,13 +4,55 @@
 
 @layer base {
   :root {
-    --color-text-white: #dfdfdf;
-    --color-text-dark: #2b2b2b;
-    --color-text-primary: #2b2b2b;
-    --color-text-primary-muted: #4b4b4b;
-    --color-text-secondary: #dbdbdb;
-    --color-text-secondary-muted: #8a8a8a;
-    --color-text-success: #00690e;
-    --color-text-danger: #a00101;
+    --color-white: 225, 225, 225;
+    --color-black: 50, 50, 50;
+
+    --color-fill-light: 244, 244, 245;
+    --color-fill-dark: 39, 39, 42;
+    --color-dark-fill-light: 255, 230, 212;
+    --color-dark-fill-dark: 255, 104, 0;
+
+    --color-primary-light: 244, 244, 245;
+    --color-primary-dark: 39, 39, 42;
+
+    --color-secondary-light: 244, 244, 245;
+    --color-secondary-dark: 39, 39, 42;
+
+    --color-text-primary: 43, 43, 43;
+    --color-text-primary-muted: 75, 75, 75;
+    --color-text-secondary: 219, 219, 219;
+    --color-text-secondary-muted: 138, 138, 138;
+
+    --color-success-light: 0, 105, 14;
+    --color-success-dark: 0, 80, 14;
+    --color-danger-light: 160, 1, 1;
+    --color-danger-dark: 125, 1, 1;
+  }
+  .theme-test {
+    --color-white: 225, 225, 225;
+    --color-black: 50, 50, 50;
+
+    --color-fill-light: 255, 230, 212;
+    --color-fill-dark: 255, 230, 212;
+
+    --color-primary-light: 255, 104, 0;
+    --color-primary-fill-light: 255, 104, 0;
+    --color-primary-dark: 39, 39, 42;
+    --color-primary-fill-dark: 255, 104, 0;
+
+    --color-secondary-light: 255, 230, 212;
+    --color-secondary-fill-light: 255, 230, 212;
+    --color-secondary-dark: 39, 39, 42;
+    --color-secondary-fill-dark: 255, 104, 0;
+
+    --color-text-primary: 43, 43, 43;
+    --color-text-primary-muted: 75, 75, 75;
+    --color-text-secondary: 219, 219, 219;
+    --color-text-secondary-muted: 138, 138, 138;
+
+    --color-success-light: 0, 105, 14;
+    --color-success-dark: 0, 80, 14;
+    --color-danger-light: 160, 1, 1;
+    --color-danger-dark: 125, 1, 1;
   }
 }

@@ -97,9 +97,9 @@ function NavMenu({ projects }: NavProps) {
               <NavigationMenuItem key={menu.link}>
                 <NavigationMenuTrigger
                   className={cn(
-                    "bg-zinc-300 dark:bg-zinc-700 dark:hover:bg-zinc-800",
+                    "bg-secondary-light dark:bg-secondary-dark dark:hover:bg-secondary-dark",
                     active &&
-                      "bg-zinc-100 dark:bg-zinc-800 dark:hover:bg-zinc-900 shadow-inner shadow-zinc-400 dark:shadow-zinc-950"
+                    "bg-zinc-100 dark:bg-zinc-800 dark:hover:bg-zinc-900 shadow-inner shadow-zinc-400 dark:shadow-zinc-950"
                   )}
                 >
                   <Icon className="h-4 w-4 mr-2" />
@@ -141,7 +141,7 @@ function NavMenu({ projects }: NavProps) {
                     navigationMenuTriggerStyle(),
                     "bg-zinc-300 dark:bg-zinc-700 dark:hover:bg-zinc-800",
                     active &&
-                      "bg-zinc-100 dark:bg-zinc-800 dark:hover:bg-zinc-900 dark shadow-inner shadow-zinc-400 dark:shadow-zinc-950"
+                    "bg-zinc-100 dark:bg-zinc-800 dark:hover:bg-zinc-900 dark shadow-inner shadow-zinc-400 dark:shadow-zinc-950"
                   )}
                 >
                   <Icon className="h-4 w-4 mr-2" />

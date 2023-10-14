@@ -2,11 +2,11 @@
 /** @type {import('tailwindcss').Config} */
 
 const withOpacity = color => {
-  return opacity => {
-    if (opacity) {
-      return `rgba(var(--${color}), ${opacity})`;
+  return ({ opacityValue }) => {
+    if (!opacityValue) {
+      return `var(--${color})`;
     }
-    return `rgb(var(--${color}))`;
+    return `rgba(var(--${color}), ${opacityValue})`;
   };
 };
 
@@ -27,16 +27,27 @@ module.exports = {
       },
     },
     extend: {
-      textColor: {
-        skin: {
-          white: withOpacity("color-text-white"),
-          dark: withOpacity("color-text-dark"),
-          primary: withOpacity("color-text-primary"),
-          "primary-muted": withOpacity("color-text-primary-muted"),
-          secondary: withOpacity("color-text-secondary"),
-          "secondary-muted": withOpacity("color-text-secondary-muted"),
-          success: withOpacity("color-text-success"),
-          danger: withOpacity("color-text-danger"),
+      colors: {
+        white: withOpacity("color-white"),
+        black: withOpacity("color-black"),
+        primary: {
+          light: withOpacity("color-primary-light"),
+          "fill-light": withOpacity("color-primary-fill-light"),
+          DEFAULT: withOpacity("color-primary-light"),
+          dark: withOpacity("color-primary-dark"),
+          "fill-dark": withOpacity("color-primary-fill-dark"),
+        },
+        secondary: {
+          light: withOpacity("color-secondary-light"),
+          "fill-light": withOpacity("color-secondary-fill-light"),
+          DEFAULT: withOpacity("color-secondary-light"),
+          dark: withOpacity("color-secondary-dark"),
+          "fill-dark": withOpacity("color-secondary-fill-dark"),
+        },
+        fill: {
+          light: withOpacity("color-fill-light"),
+          DEFAULT: withOpacity("color-fill-light"),
+          dark: withOpacity("color-fill-dark"),
         },
       },
       keyframes: {
