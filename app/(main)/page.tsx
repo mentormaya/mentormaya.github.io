@@ -1,7 +1,8 @@
 import Heading from "@/components/sections/heading";
 import Hero from "@/components/sections/hero";
 
-const options = ["Ajay", "Engineer", "Designer", "Enthusiast"];
+import { options } from "@/components/data/hero-options";
+
 const description =
   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sit optio repellat reiciendis, aliquam quisquam molestiae saepe delectus, eaque maiores dolore unde, quas soluta quos.";
 

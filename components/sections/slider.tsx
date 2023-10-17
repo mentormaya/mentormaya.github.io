@@ -1,7 +1,12 @@
 import React from "react";
 import Link from "next/link";
+import { Nunito } from "next/font/google";
 
 import { cn } from "@/helper/utils";
+
+const nunito = Nunito({
+  subsets: ["latin"],
+});
 
 interface Content {
   text: string;
@@ -36,7 +41,7 @@ interface ElementProps {
 
 const Item = async ({
   item,
-  variant = "SUCCESS",
+  variant,
   hidden = false,
   border = true,
   style = true,
@@ -46,7 +51,9 @@ const Item = async ({
   return (
     <li
       className={cn(
-        "rounded-md px-4 shadow-md cursor-pointer",
+        nunito.className,
+        "rounded-md px-4 cursor-pointer text-primary-light italic",
+        "bg-primary-fill-light bg-opacity-20 dark:bg-secondary-fill-dark border border-primary-light dark:border-primary-dark border-opacity-75",
         "hover:underline",
         style &&
           variant === "SUCCESS" &&
@@ -128,7 +135,7 @@ function Slider({
   return (
     <div
       className={cn(
-        "scroller mx-12 container m-auto",
+        "scroller mx-12 container m-auto bg-secondary-fill-light dark:bg-secondary-fill-dark",
         // "border border-red-600", // debugging option
         animated &&
           "overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_10%,_black_90%,transparent_100%)]"

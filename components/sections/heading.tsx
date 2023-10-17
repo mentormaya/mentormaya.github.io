@@ -10,8 +10,10 @@ interface Props {
 function Heading({ title }: Props) {
   return (
     <>
-      <h1 className={cn("text-zinc-900 dark:text-zinc-300")}>{title}</h1>
-      <Separator className="dark:bg-zinc-500" />
+      <h1 className={cn("text-primary-light dark:text-primary-dark")}>
+        {title}
+      </h1>
+      <Separator />
     </>
   );
 }

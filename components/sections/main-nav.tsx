@@ -7,7 +7,7 @@ import { cn } from "@/helper/utils";
 import Link from "next/link";
 import { getProjects } from "@/actions/projects";
 import { Button } from "../ui/button";
-import { ModeToggle } from "../mode-toggle";
+import { ModeToggle } from "./mode-toggle";
 import NavMenu from "./navigation-menu";
 import { ProjectProps } from "../props/projects";
 
@@ -42,17 +42,20 @@ async function MainNav({ className }: MainNavProps) {
               asChild
               key={menu.link}
               variant="outline"
-              className="rounded-full border-primary-light dark:border-primary-dark bg-secondary-light dark:bg-secondary-dark dark:hover:bg-secondary-dark hover:bg-opacity-80 shadow-inner shadow-zinc-400 dark:shadow-zinc-950"
+              className="group/btn rounded-full border-primary-light dark:border-primary-dark bg-secondary-fill-light dark:bg-secondary-fill-dark hover:bg-opacity-80 shadow-inner shadow-zinc-400 dark:shadow-zinc-950"
             >
-              <Link href={menu.link}>
-                <Icon className="h-4 w-4 mr-2" />
+              <Link
+                href={menu.link}
+                className="text-primary-light dark:text-primary-dark group-hover/btn:text-black"
+              >
+                <Icon className="h-4 w-4 mr-2 text-primary-light dark:text-primary-dark group-hover/btn:text-black" />
                 {menu.label}
               </Link>
             </Button>
           );
         })}
         <ModeToggle
-          className="rounded-full mx-4 hover:bg-opacity-80"
+          className="rounded-full mx-4 text-secondary-light"
           variant="ghost"
         />
       </div>

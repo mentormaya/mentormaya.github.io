@@ -42,22 +42,25 @@ export function ModeToggle({ className, variant }: ModeToggleProps) {
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent
+        align="end"
+        className="bg-secondary-fill-light dark:bg-secondary-fill-dark"
+      >
         <DropdownMenuItem
           onClick={() => setTheme("light")}
-          className="cursor-pointer"
+          className="cursor-pointer hover:bg-primary-fill-light hover:bg-opacity-75"
         >
           Light
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme("dark")}
-          className="cursor-pointer"
+          className="cursor-pointer hover:bg-primary-fill-light hover:bg-opacity-75"
         >
           Dark
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme("system")}
-          className="cursor-pointer"
+          className="cursor-pointer hover:bg-primary-fill-light hover:bg-opacity-75"
         >
           System
         </DropdownMenuItem>
