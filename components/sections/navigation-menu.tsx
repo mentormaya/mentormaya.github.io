@@ -26,7 +26,7 @@ const ListItem = React.forwardRef<
 >(({ className, title, icon, children, ...props }, ref) => {
   const Icon = icon ?? Info;
   return (
-    <li className="border border-zinc-300 rounded-md hover:bg-zinc-100 dark:bg-zinc-800 dark:hover:bg-zinc-900 hover:shadow-md">
+    <li className="border border-primary-fill-light border-opacity-30 rounded-md hover:bg-white dark:bg-zinc-800 dark:hover:bg-zinc-900 hover:shadow-md">
       <NavigationMenuLink asChild>
         <a
           ref={ref}
@@ -36,12 +36,14 @@ const ListItem = React.forwardRef<
           )}
           {...props}
         >
-          <Icon className="h-10 w-10 m-auto" />
-          <div className="text-bold font-medium leading-none">{title}</div>
+          <Icon className="h-10 w-10 m-auto text-primary-light" />
+          <div className="text-bold text-primary-light font-medium leading-none">
+            {title}
+          </div>
           {children && (
             <>
-              <Separator />
-              <p className="line-clamp-2 text-sm leading-snug text-muted-foreground text-left">
+              <Separator className="bg-primary-light bg-opacity-40" />
+              <p className="line-clamp-2 text-sm leading-snug text-primary-light text-opacity-90 text-left">
                 {children}
               </p>
             </>
@@ -97,18 +99,18 @@ function NavMenu({ projects }: NavProps) {
               <NavigationMenuItem key={menu.link}>
                 <NavigationMenuTrigger
                   className={cn(
-                    "bg-secondary-light dark:bg-secondary-dark dark:hover:bg-secondary-dark",
+                    "bg-secondary-light dark:bg-secondary-dark dark:hover:bg-secondary-dark text-primary-light",
                     active &&
-                    "bg-zinc-100 dark:bg-zinc-800 dark:hover:bg-zinc-900 shadow-inner shadow-zinc-400 dark:shadow-zinc-950"
+                      "bg-secondary-light dark:bg-secondary-dark dark:hover:bg-secondary-dark shadow-inner shadow-zinc-400 dark:shadow-zinc-950"
                   )}
                 >
-                  <Icon className="h-4 w-4 mr-2" />
+                  <Icon className="h-4 w-4 mr-2 text-primary-light" />
                   {menu.label}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul
                     className={cn(
-                      "grid w-[650px] gap-2 p-4 md:grid-cols-3 overflow-y-auto dark:bg-zinc-900",
+                      "grid w-[650px] gap-2 p-4 md:grid-cols-3 overflow-y-auto bg-secondary-fill-light bg-opacity-10 dark:bg-secondary-dark",
                       menu.submenu.length > 3 && "h-96"
                     )}
                   >
@@ -139,9 +141,9 @@ function NavMenu({ projects }: NavProps) {
                 <NavigationMenuLink
                   className={cn(
                     navigationMenuTriggerStyle(),
-                    "bg-zinc-300 dark:bg-zinc-700 dark:hover:bg-zinc-800",
+                    "bg-secondary-light dark:bg-secondary-dark dark:hover:bg-zinc-800 text-primary-light",
                     active &&
-                    "bg-zinc-100 dark:bg-zinc-800 dark:hover:bg-zinc-900 dark shadow-inner shadow-zinc-400 dark:shadow-zinc-950"
+                      "bg-white dark:bg-zinc-800 dark:hover:bg-zinc-900 dark shadow-inner shadow-zinc-400 dark:shadow-zinc-950"
                   )}
                 >
                   <Icon className="h-4 w-4 mr-2" />

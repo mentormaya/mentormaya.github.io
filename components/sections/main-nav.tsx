@@ -51,7 +51,10 @@ async function MainNav({ className }: MainNavProps) {
             </Button>
           );
         })}
-        <ModeToggle className="rounded-full mx-4 hover:bg-opacity-80" variant="ghost" />
+        <ModeToggle
+          className="rounded-full mx-4 hover:bg-opacity-80"
+          variant="ghost"
+        />
       </div>
     </div>
   );

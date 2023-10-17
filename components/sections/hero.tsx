@@ -34,7 +34,10 @@ function Hero({
           {`${text} `} <span>{`${options[0]}`}</span>
         </h1>
         <p className="my-2">{description}</p>
-        <Button className="mt-2 w-max" onClick={action}>
+        <Button
+          className="mt-2 w-max bg-primary-fill-light hover:bg-primary-fill-light shadow-md hover:bg-opacity-90"
+          onClick={action}
+        >
           {button}
         </Button>
       </div>
