@@ -42,13 +42,13 @@ async function MainNav({ className }: MainNavProps) {
               asChild
               key={menu.link}
               variant="outline"
-              className="group/btn rounded-full border-primary-light dark:border-primary-dark bg-secondary-fill-light dark:bg-secondary-fill-dark hover:bg-opacity-80 shadow-inner shadow-zinc-400 dark:shadow-zinc-950"
+              className="group/btn rounded-full border-primary-light dark:border-primary-dark bg-primary-fill-light-muted dark:bg-primary-fill-dark-muted hover:bg-opacity-80 shadow-inner shadow-zinc-400 dark:shadow-zinc-950"
             >
               <Link
                 href={menu.link}
-                className="text-primary-light dark:text-primary-dark group-hover/btn:text-black"
+                className="text-primary-light dark:text-primary-dark group-hover/btn:text-secondary-light"
               >
-                <Icon className="h-4 w-4 mr-2 text-primary-light dark:text-primary-dark group-hover/btn:text-black" />
+                <Icon className="h-4 w-4 mr-2 text-primary-light dark:text-primary-dark group-hover/btn:text-secondary-light" />
                 {menu.label}
               </Link>
             </Button>

@@ -52,8 +52,8 @@ const Item = async ({
     <li
       className={cn(
         nunito.className,
-        "rounded-md px-4 cursor-pointer text-primary-light italic",
-        "bg-primary-fill-light bg-opacity-20 dark:bg-secondary-fill-dark border border-primary-light dark:border-primary-dark border-opacity-75",
+        "rounded-md px-4 cursor-pointer text-secondary-light italic",
+        "bg-primary-fill-light bg-opacity-20 dark:bg-secondary-fill-dark border border-secondary-light dark:border-primary-dark border-opacity-75",
         "hover:underline",
         style &&
           variant === "SUCCESS" &&
@@ -135,7 +135,7 @@ function Slider({
   return (
     <div
       className={cn(
-        "scroller mx-12 container m-auto bg-secondary-fill-light dark:bg-secondary-fill-dark",
+        "scroller mx-12 container m-auto bg-primary-fill-light-muted dark:bg-primary-fill-dark-muted",
         // "border border-red-600", // debugging option
         animated &&
           "overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_10%,_black_90%,transparent_100%)]"

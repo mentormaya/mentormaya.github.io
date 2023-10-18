@@ -99,20 +99,20 @@ function NavMenu({ projects }: NavProps) {
               <NavigationMenuItem key={menu.link}>
                 <NavigationMenuTrigger
                   className={cn(
-                    "group/menu-item bg-secondary-light dark:bg-secondary-dark dark:hover:bg-secondary-dark text-primary-light hover:text-black data-[state=open]:bg-white",
+                    "group/menu-item bg-primary-fill-light-muted dark:bg-secondary-dark dark:hover:bg-secondary-dark text-primary-light hover:text-secondary-light data-[state=open]:bg-white",
                     active &&
-                      "bg-secondary-light dark:bg-secondary-dark dark:hover:bg-secondary-dark shadow-inner shadow-zinc-400 dark:shadow-zinc-950 text-black hover:text-black"
+                      "bg-primary-fill-light-muted dark:bg-secondary-dark dark:hover:bg-secondary-dark shadow-inner shadow-zinc-400 dark:shadow-zinc-950 text-secondary-light hover:text-secondary-light"
                   )}
                 >
                   <Icon
                     className={cn(
-                      "h-4 w-4 mr-2 text-primary-light group-hover/menu-item:text-black",
-                      active && "text-black"
+                      "h-4 w-4 mr-2 text-primary-light group-hover/menu-item:text-secondary-light",
+                      active && "text-secondary-light"
                     )}
                   />
                   {menu.label}
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-secondary-fill-light dark:bg-secondary-dark bg-opacity-80">
+                <NavigationMenuContent className="bg-primary-fill-light-muted dark:bg-primary-fill-dark-muted bg-opacity-80">
                   <ul
                     className={cn(
                       "grid w-[650px] gap-2 p-4 md:grid-cols-3 overflow-y-auto",
@@ -146,7 +146,7 @@ function NavMenu({ projects }: NavProps) {
                 <NavigationMenuLink
                   className={cn(
                     navigationMenuTriggerStyle(),
-                    "bg-secondary-light dark:bg-secondary-dark dark:hover:bg-zinc-800 text-primary-light",
+                    "bg-primary-fill-light-muted dark:bg-primary-fill-dark-muted dark:hover:bg-zinc-800 text-primary-light",
                     active &&
                       "bg-white dark:bg-zinc-800 dark:hover:bg-zinc-900 dark shadow-inner shadow-zinc-400 dark:shadow-zinc-950"
                   )}

@@ -41,7 +41,7 @@ function Hero({
           )}
         >
           {`${salutation} `}{" "}
-          <span className="py-2 px-4 ml-2 bg-primary-light dark:bg-primary-dark bg-opacity-50 rounded-md text-black">{`${audience} `}</span>{" "}
+          <span className="py-2 px-4 ml-2 bg-primary-light dark:bg-primary-dark bg-opacity-50 rounded-md text-secondary-light dark:text-secondary-dark">{`${audience} `}</span>{" "}
         </h2>
         <h1 className="text-3xl font-bold">{`${options[0] ?? info.name}`}</h1>
         <p className="my-2 text-primary-light dark:text-primary-dark">

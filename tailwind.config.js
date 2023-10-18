@@ -33,13 +33,16 @@ module.exports = {
         primary: {
           light: withOpacity("color-primary-light"),
           "fill-light": withOpacity("color-primary-fill-light"),
+          "fill-light-muted": withOpacity("color-primary-fill-light-muted"),
           DEFAULT: withOpacity("color-primary-light"),
           dark: withOpacity("color-primary-dark"),
           "fill-dark": withOpacity("color-primary-fill-dark"),
+          "fill-dark-muted": withOpacity("color-primary-fill-dark-muted"),
         },
         secondary: {
           light: withOpacity("color-secondary-light"),
           "fill-light": withOpacity("color-secondary-fill-light"),
+          "fill-light-muted": withOpacity("color-secondary-fill-light-muted"),
           DEFAULT: withOpacity("color-secondary-light"),
           dark: withOpacity("color-secondary-dark"),
           "fill-dark": withOpacity("color-secondary-fill-dark"),

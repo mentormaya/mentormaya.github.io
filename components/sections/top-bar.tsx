@@ -16,9 +16,9 @@ import { info } from "@/components/data/info";
 
 function TopBar() {
   return (
-    <div className="shadow-inner bg-secondary-light dark:bg-secondary-dark shadow-zinc-800">
+    <div className="shadow-inner bg-primary-fill-light-muted dark:bg-primary-fill-dark-muted shadow-zinc-800">
       <div className="top-bar container flex flex-row justify-between content-center py-1">
-        <div className="left-top flex flex-row gap-4 text-primary-light dark:text-primary-dark">
+        <div className="left-top flex flex-row gap-4 text-secondary-light dark:text-secondary-dark">
           <div className="address">
             <Link
               href={info.map}
@@ -48,7 +48,7 @@ function TopBar() {
             </Link>
           </div>
         </div>
-        <div className="right-top flex flex-row gap-4">
+        <div className="right-top flex flex-row gap-4 text-secondary-light">
           {info.facebook && (
             <Link href={info.facebook} target="_blank">
               <Facebook className="h-4 w-4 cursor-pointer hover:bg-blue-600 hover:rounded hover:bg-opacity-80 hover:text-blue-800" />
