@@ -28,9 +28,13 @@ const posts = [
   },
 ];
 
-function Header() {
+interface Props {
+  slider?: boolean;
+}
+
+function Header({ slider = true }: Props) {
   return (
-    <header className="fixed top-0 w-full rounded shadow-md shadow-zinc-500">
+    <header className="sticky top-0 w-full rounded shadow-md shadow-zinc-500">
       <TopBar />
       <div className="bg-primary-fill-light  shadow-sm shadow-zinc-500">
         <div className="container navigation flex content-center justify-start gap-4 py-1">
@@ -45,7 +49,7 @@ function Header() {
           <MainNav />
         </div>
       </div>
-      <Slider type="post" content={posts} />
+      {slider && <Slider type="post" content={posts} />}
     </header>
   );
 }

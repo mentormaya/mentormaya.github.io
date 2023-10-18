@@ -35,14 +35,14 @@ export const mainMenu: MenuProps[] = [
     icon: BadgeInfo,
   },
   {
-    label: "Blog",
-    link: "blog",
-    icon: Newspaper,
-  },
-  {
     label: "Contact",
     link: "contact",
     icon: UserSquare2,
+  },
+  {
+    label: "Blog",
+    link: "blog",
+    icon: Newspaper,
   },
   {
     label: "Portfolio",

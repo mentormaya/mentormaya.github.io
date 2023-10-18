@@ -5,7 +5,7 @@ import { Kaushan_Script } from "next/font/google";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/helper/utils";
-import { info } from "@/components/data/info";
+import { info } from "@/constants/info";
 
 const font = Kaushan_Script({
   subsets: ["latin"],
@@ -25,15 +25,15 @@ interface Props {
 function Hero({
   options,
   description,
-  salutation = "I",
-  audience = "am",
+  salutation = "Hello,",
+  audience = "I 'm",
   button = "Know me More!",
   image = "/images/hero.svg",
   action,
 }: Props) {
   return (
     <section className="flex justify-between content-center">
-      <div className="w-full flex flex-col items-starts justify-center p-4">
+      <div className="w-full flex flex-col items-center justify-center p-4 gap-4">
         <h2
           className={cn(
             font.className,
@@ -41,10 +41,15 @@ function Hero({
           )}
         >
           {`${salutation} `}{" "}
-          <span className="py-2 px-4 ml-2 bg-primary-light dark:bg-primary-dark bg-opacity-50 rounded-md text-secondary-light dark:text-secondary-dark">{`${audience} `}</span>{" "}
+          <span className="py-1 px-4 ml-2 bg-primary-light dark:bg-primary-dark bg-opacity-50 border border-primary-light rounded-md text-secondary-light dark:text-secondary-dark">{`${audience} `}</span>{" "}
         </h2>
-        <h1 className="text-3xl font-bold">{`${options[0] ?? info.name}`}</h1>
-        <p className="my-2 text-primary-light dark:text-primary-dark">
+        <h1
+          className={cn(
+            font.className,
+            "text-4xl font-extrabold text-secondary-light"
+          )}
+        >{`${options[0] ?? info.name}`}</h1>
+        <p className="my-2 mt-8 text-secondary-light-muted font-semibold dark:text-primary-dark">
           {description}
         </p>
         <Button

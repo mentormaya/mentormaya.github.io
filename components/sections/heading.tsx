@@ -5,16 +5,24 @@ import { cn } from "@/helper/utils";
 
 interface Props {
   title: string;
+  children?: React.ReactNode;
 }
 
-function Heading({ title }: Props) {
+function Heading({ title, children }: Props) {
   return (
-    <>
-      <h1 className={cn("text-primary-light dark:text-primary-dark")}>
-        {title}
-      </h1>
+    <section>
+      <div className="section-content flex justify-between mb-2">
+        <h1
+          className={cn(
+            "text-primary-light dark:text-primary-dark font-semibold"
+          )}
+        >
+          {title}
+        </h1>
+        {children}
+      </div>
       <Separator />
-    </>
+    </section>
   );
 }
 

@@ -12,7 +12,7 @@ import {
 import Link from "next/link";
 import React from "react";
 
-import { info } from "@/components/data/info";
+import { info } from "@/constants/info";
 
 function TopBar() {
   return (

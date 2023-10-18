@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from "react";
 
-import { rightMenu } from "@/components/data/menus";
+import { rightMenu } from "@/constants/menus";
 
 import { cn } from "@/helper/utils";
 import Link from "next/link";

@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 import { Separator } from "@/components/ui/separator";
 
-import { mainMenu } from "@/components/data/menus";
+import { mainMenu } from "@/constants/menus";
 import { cn } from "@/helper/utils";
 import {
   NavigationMenu,
@@ -26,7 +26,7 @@ const ListItem = React.forwardRef<
 >(({ className, title, icon, children, ...props }, ref) => {
   const Icon = icon ?? Info;
   return (
-    <li className="border border-primary-fill-light border-opacity-30 rounded-md hover:bg-white hover:shadow-md">
+    <li className="border border-secondary-fill-light border-opacity-30 rounded-md bg-transparent hover:bg-white hover:shadow-md">
       <NavigationMenuLink asChild>
         <a
           ref={ref}
@@ -146,9 +146,9 @@ function NavMenu({ projects }: NavProps) {
                 <NavigationMenuLink
                   className={cn(
                     navigationMenuTriggerStyle(),
-                    "bg-primary-fill-light-muted dark:bg-primary-fill-dark-muted dark:hover:bg-zinc-800 text-primary-light",
+                    "bg-primary-fill-light-muted dark:bg-primary-fill-dark-muted dark:hover:bg-zinc-800 text-primary-light hover:text-secondary-light",
                     active &&
-                      "bg-white dark:bg-zinc-800 dark:hover:bg-zinc-900 dark shadow-inner shadow-zinc-400 dark:shadow-zinc-950"
+                      "bg-white text-secondary-light dark:bg-zinc-800 dark:hover:bg-zinc-900 dark shadow-inner shadow-zinc-400 dark:shadow-zinc-950"
                   )}
                 >
                   <Icon className="h-4 w-4 mr-2" />

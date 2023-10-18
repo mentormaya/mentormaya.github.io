@@ -70,6 +70,14 @@ module.exports = {
           from: { transform: "translateX(0)" },
           to: { transform: "translateX(50%)" },
         },
+        swing: {
+          from: { transform: "rotate(10deg)" },
+          to: { transform: "rotate(-10deg)" },
+        },
+        swinghair: {
+          from: { transform: "rotate(6deg)" },
+          to: { transform: "rotate(-6deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -86,6 +94,8 @@ module.exports = {
         "infinite-scroll-xfast": "infinite-scroll 15s linear infinite",
         "infinite-scroll-xfast-reverse":
           "infinite-scroll-reverse 15s linear infinite",
+        "infinite-swing": "swing 1.3s ease-in-out infinite alternate",
+        "infinite-swinghair": "swinghair 1.3s ease-in-out infinite alternate",
       },
     },
   },
