@@ -6,15 +6,20 @@ import { cn } from "@/helper/utils";
 interface Props {
   title: string;
   children?: React.ReactNode;
+  className?: string;
+  textClassName?: string;
 }
 
-function Heading({ title, children }: Props) {
+function Heading({ title, children, className, textClassName }: Props) {
   return (
     <section>
-      <div className="section-content flex justify-between mb-2">
+      <div
+        className={cn("section-content flex justify-between mb-2", className)}
+      >
         <h1
           className={cn(
-            "text-primary-light dark:text-primary-dark font-semibold"
+            "text-primary-light dark:text-primary-dark font-semibold",
+            textClassName
           )}
         >
           {title}

@@ -1,6 +1,8 @@
 /* eslint-disable global-require */
 /** @type {import('tailwindcss').Config} */
 
+import tailwindAnimate from "tailwindcss-animate";
+
 const withOpacity = color => {
   return ({ opacityValue }) => {
     if (!opacityValue) {
@@ -10,7 +12,7 @@ const withOpacity = color => {
   };
 };
 
-module.exports = {
+const config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -99,5 +101,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindAnimate],
 };
+
+export default config;
