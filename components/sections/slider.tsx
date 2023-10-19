@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Nunito } from "next/font/google";
 
 import { cn } from "@/helper/utils";
@@ -9,8 +10,9 @@ const nunito = Nunito({
 });
 
 interface Content {
+  feature_image: string;
   text: string;
-  url?: string;
+  url: string;
 }
 
 interface Props {
@@ -38,6 +40,41 @@ interface ElementProps {
   content: Content[];
   variant?: string;
 }
+
+interface CardItemProps {
+  title: string;
+  image: string;
+  url: string;
+  hidden?: boolean;
+}
+
+const CardItem = async ({
+  title,
+  image,
+  url,
+  hidden = false,
+}: CardItemProps) => {
+  return (
+    <li
+      key={url ?? title}
+      className="bg-secondary-light bg-opacity-30 h-28 w-40 rounded-xl cursor-pointer relative border-2 border-primary-light"
+      aria-hidden={hidden}
+    >
+      <Link href={url}>
+        <Image
+          src={image}
+          alt="Feature Image"
+          height={80}
+          width={150}
+          className="rounded-xl h-full w-full"
+        />
+        <p className="absolute w-full bottom-0 bg-primary-light bg-opacity-80 text-sm text-secondary-light p-1">
+          {title}
+        </p>
+      </Link>
+    </li>
+  );
+};
 
 const Item = async ({
   item,
@@ -116,7 +153,34 @@ function Elements({ type, content, variant }: ElementProps) {
           ))}
         </>
       );
-
+    case "card":
+      return (
+        <>
+          {content.map(item => (
+            <CardItem
+              title={item.text}
+              image={item.feature_image}
+              url={item.url}
+            />
+          ))}
+          {content.map(item => (
+            <CardItem
+              title={item.text}
+              image={item.feature_image}
+              url={item.url}
+              hidden
+            />
+          ))}
+          {content.map(item => (
+            <CardItem
+              title={item.text}
+              image={item.feature_image}
+              url={item.url}
+              hidden
+            />
+          ))}
+        </>
+      );
     default:
       break;
   }
@@ -135,7 +199,7 @@ function Slider({
   return (
     <div
       className={cn(
-        "scroller mx-12 container m-auto bg-primary-fill-light-muted dark:bg-primary-fill-dark-muted",
+        "scroller mx-12 container m-auto bg-primary-fill-light-muted dark:bg-primary-fill-dark-muted mb-8",
         // "border border-red-600", // debugging option
         animated &&
           "overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_10%,_black_90%,transparent_100%)]"

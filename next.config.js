@@ -5,6 +5,11 @@ const nextConfig = {
   experimental: {
     serverActions: true,
   },
+  images: {
+    loader: "akamai",
+    path: "",
+    unoptimized: true,
+  },
 };
 
 module.exports = nextConfig;

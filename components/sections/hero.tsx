@@ -3,7 +3,6 @@ import Image from "next/image";
 // eslint-disable-next-line camelcase
 import { Kaushan_Script } from "next/font/google";
 
-import { info } from "@/constants/info";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/helper/utils";
 import HeroTyper from "@/components/parts/hero-typer";
@@ -36,7 +35,7 @@ function Hero({
 }: Props) {
   return (
     <section className="flex justify-between content-center">
-      <div className="w-full flex flex-col items-center justify-center gap-2 bg-secondary-light bg-opacity-30 rounded-2xl mt-2 p-8">
+      <div className="w-full flex flex-col items-center justify-center gap-2 bg-secondary-light bg-opacity-30 rounded-2xl lg:bg-transparent mt-2 p-8">
         <h2
           className={cn(
             "text-2xl font-semibold text-left italic text-secondary-light"
@@ -46,9 +45,6 @@ function Hero({
           <span className="py-1 px-4 ml-2 text-primary-light dark:text-primary-dark">{`${audience} `}</span>{" "}
         </h2>
         <HeroTyper sequence={options} className={font.className} wrapper="h1" />
-        {/* <p className="my-2 mt-8 text-secondary-light font-semibold dark:text-primary-dark">
-          {description}
-        </p> */}
         <Typer sequence={[description]} repeat={0} />
         <div className="action flex justify-around gap-4">
           <Button

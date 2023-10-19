@@ -2,31 +2,9 @@ import React from "react";
 import Image from "next/image";
 
 import MainNav from "@/components/sections/main-nav";
+import { posts } from "@/constants/posts";
 import TopBar from "./top-bar";
 import Slider from "./slider";
-
-const posts = [
-  {
-    text: "Something random to be published. 📬",
-    url: "something-random-to-be-published",
-  },
-  {
-    text: "Testing posts scroller! 🍷",
-    url: "testing-posts-scroller",
-  },
-  {
-    text: "What do you think about this? 🤔",
-    url: "what-do-you-think-about-this",
-  },
-  {
-    text: "Sample content for the scroller test 🥳",
-    url: "sample-content-for-the-scroller-test",
-  },
-  {
-    text: "नेपाली युनिकाेड चेक 🥳",
-    url: "nepali-unicode-test",
-  },
-];
 
 interface Props {
   slider?: boolean;
