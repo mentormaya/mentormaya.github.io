@@ -68,7 +68,7 @@ const CardItem = async ({
           width={150}
           className="rounded-xl h-full w-full"
         />
-        <p className="absolute w-full bottom-0 bg-primary-light bg-opacity-60 text-sm text-secondary-light p-1">
+        <p className="absolute w-full bottom-0 bg-primary-light bg-opacity-60 text-sm text-secondary-light p-1 rounded-md rounded-t-none">
           {title}
         </p>
       </Link>
