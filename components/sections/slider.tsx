@@ -57,7 +57,7 @@ const CardItem = async ({
   return (
     <li
       key={url ?? title}
-      className="bg-secondary-light bg-opacity-30 h-28 w-40 rounded-xl cursor-pointer relative border-2 border-primary-light"
+      className="bg-secondary-light bg-opacity-30 h-28 w-40 rounded-xl cursor-pointer relative border-2 border-primary-light shadow-2xl"
       aria-hidden={hidden}
     >
       <Link href={url}>
@@ -68,7 +68,7 @@ const CardItem = async ({
           width={150}
           className="rounded-xl h-full w-full"
         />
-        <p className="absolute w-full bottom-0 bg-primary-light bg-opacity-80 text-sm text-secondary-light p-1">
+        <p className="absolute w-full bottom-0 bg-primary-light bg-opacity-60 text-sm text-secondary-light p-1">
           {title}
         </p>
       </Link>
