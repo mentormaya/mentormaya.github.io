@@ -13,24 +13,32 @@ interface Props {
 interface SectionProps {
   title: string;
   className?: string;
+  textLocation?: "start" | "center" | "end";
 }
 
-export function SectionHeading({ title, className }: SectionProps) {
+export function SectionHeading({
+  title,
+  className,
+  textLocation = "center",
+}: SectionProps) {
   return (
     <div
       className={cn(
         "section-header grid grid-cols-[auto_1fr] my-2 items-center gap-4 px-2",
+        textLocation === "center" && "grid-cols-[1fr_auto_1fr]",
+        textLocation === "end" && "grid-cols-[1fr_auto]",
         className
       )}
     >
+      {textLocation !== "start" && <Separator className="h-1 rounded-xl" />}
       <h1
         className={cn(
-          "text-primary-light dark:text-primary-dark font-semibold"
+          "text-secondary-light dark:text-primary-dark font-semibold"
         )}
       >
         {title}
       </h1>
-      <Separator className="h-1 rounded-xl" />
+      {textLocation !== "end" && <Separator className="h-1 rounded-xl" />}
     </div>
   );
 }
