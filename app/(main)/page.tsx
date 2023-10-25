@@ -15,7 +15,6 @@ export default function Home() {
       <Skills />
       <section>
         <SectionHeading title="Work(ed) with" />
-        {/* <Slider type="card" content={posts} /> */}
         <Logos />
       </section>
       <section>Experiences</section>

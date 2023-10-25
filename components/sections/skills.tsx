@@ -4,12 +4,15 @@ import Image from "next/image";
 import { resume } from "@/constants/info";
 import { cn } from "@/helper/utils";
 import { SectionHeading } from "@/components/sections/heading";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 function Skills() {
   return (
     <section className="my-8">
       <SectionHeading title="My Skills and Technologies I love" />
-      <div className="skill-set container my-8">
+      <div className="skill-set container my-8 flex flex-col">
         <div className="m-auto flex justify-center items-center">
           <ul className="w-full flex justify-between flex-wrap">
             {resume.proffessional.skills.map(skill => {
@@ -55,6 +58,16 @@ function Skills() {
             })}
           </ul>
         </div>
+        <Button
+          variant="ghost"
+          className="m-auto text-secondary-light italic hover:bg-primary-light hover:bg-opacity-40 my-4"
+          asChild
+        >
+          <div className="flex hover:shadow-md cursor-pointer">
+            <ArrowRight className="h-4 w-4 cursor-pointer" />
+            <Link href="/about">Come with me for detailed information!</Link>
+          </div>
+        </Button>
       </div>
     </section>
   );
