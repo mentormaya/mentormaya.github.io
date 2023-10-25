@@ -15,10 +15,14 @@ function Skills() {
       <div className="skill-set container my-8 flex flex-col">
         <div className="m-auto flex justify-center items-center">
           <ul className="w-full flex justify-between flex-wrap">
-            {resume.proffessional.skills.map(skill => {
+            {resume.proffessional.skills.map((skill, indx) => {
+              const totalSkills = resume.proffessional.skills.length;
               return (
                 <li
-                  className="w-1/2 grid grid-cols-[60px_1fr] justify-center py-4 px-8"
+                  className={cn(
+                    "grid grid-cols-[60px_1fr] justify-center py-4 px-8",
+                    indx + 1 !== totalSkills && `w-1/2`
+                  )}
                   key={skill.name}
                 >
                   <div className={cn("mr-4", skill.images && "mr-8")}>
@@ -32,8 +36,8 @@ function Skills() {
                           height={60}
                           className={cn(
                             "rounded-full",
-                            index === 1 && "-m-4 -rotate-45 relative",
-                            index === 2 && "-my-4 rotate-45 relative"
+                            index === 1 && "-m-4",
+                            index === 2 && "-my-4"
                           )}
                         />
                       ))}
