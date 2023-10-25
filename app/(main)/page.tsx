@@ -1,5 +1,6 @@
 import Heading, { SectionHeading } from "@/components/sections/heading";
 import Hero from "@/components/sections/hero";
+import Logos from "@/components/sections/logos";
 import Skills from "@/components/sections/skills";
 import Slider from "@/components/sections/slider";
 
@@ -14,7 +15,8 @@ export default function Home() {
       <Skills />
       <section>
         <SectionHeading title="Work(ed) with" />
-        <Slider type="card" content={posts} />
+        {/* <Slider type="card" content={posts} /> */}
+        <Logos />
       </section>
       <section>Experiences</section>
       <section>

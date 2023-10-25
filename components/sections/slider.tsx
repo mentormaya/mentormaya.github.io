@@ -57,7 +57,7 @@ const CardItem = async ({
   return (
     <li
       key={url ?? title}
-      className="bg-secondary-light bg-opacity-30 h-28 w-40 rounded-xl cursor-pointer relative border-2 border-primary-light shadow-2xl"
+      className="bg-secondary-light bg-opacity-30 h-28 w-40 rounded-xl cursor-pointer relative border-2 border-primary-light shadow-lg shadow-primary-light"
       aria-hidden={hidden}
     >
       <Link href={url}>
@@ -161,6 +161,7 @@ function Elements({ type, content, variant }: ElementProps) {
               title={item.text}
               image={item.feature_image}
               url={item.url}
+              key={item.url}
             />
           ))}
           {content.map(item => (

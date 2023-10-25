@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 export const info = {
   name: "Ajay Singh",
   email: "admin@ajaysingh.com.np",
@@ -78,6 +79,58 @@ export const resume = {
         contact: "+977 041 426406",
         join: "2075-08-17",
         current: true,
+      },
+    ],
+    skills: [
+      {
+        name: "HTML",
+        technology: "Web Development",
+        rating: 80,
+        rating_unit: "%",
+        image: "/icons/html5.png",
+        experience: "7 Years+",
+      },
+      {
+        name: "CSS",
+        technology: "Web Development",
+        rating: 60,
+        image: "/icons/css3.png",
+        experience: "7 Years+",
+      },
+      {
+        name: "JS",
+        technology: "Web Development",
+        rating: 90,
+        image: "/icons/js.svg",
+        experience: "6 Years+",
+      },
+      {
+        name: "PHP",
+        technology: "Web Development",
+        rating: 70,
+        image: "/icons/php.png",
+        experience: "5 Years+",
+      },
+      {
+        name: "Wordpress",
+        technology: "CMS",
+        rating: 70,
+        image: "/icons/wp.svg",
+        experience: "5 Years+",
+      },
+      {
+        name: "Nodejs/React",
+        technology: "Nodejs/Web Development",
+        rating: 85,
+        image: "/icons/react.png",
+        experience: "5 Years+",
+      },
+      {
+        name: "Python",
+        technology: "Automation and Programming",
+        rating: 85,
+        image: "/icons/python.png",
+        experience: "3 Years+",
       },
     ],
   },
