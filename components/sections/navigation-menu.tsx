@@ -18,7 +18,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { GitFork, Info, LucideIcon, Workflow } from "lucide-react";
-import { ProjectProps } from "../props/projects";
+import { ProjectProps } from "@/components/props/projects";
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,

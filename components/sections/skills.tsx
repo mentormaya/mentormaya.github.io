@@ -1,17 +1,19 @@
 import React from "react";
 import Image from "next/image";
 
-import { resume } from "@/constants/info";
+import { logos, resume } from "@/constants/info";
 import { cn } from "@/helper/utils";
 import { SectionHeading } from "@/components/sections/heading";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Logos from "@/components/sections/logos";
 
 function Skills() {
   return (
     <section className="my-8">
       <SectionHeading title="My Skills and Technologies I love" />
+      <Logos content={logos} />
       <div className="skill-set container my-8 flex flex-col">
         <div className="m-auto flex justify-center items-center">
           <ul className="w-full flex justify-between flex-wrap">

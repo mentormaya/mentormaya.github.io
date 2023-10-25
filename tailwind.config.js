@@ -69,8 +69,8 @@ const config = {
           to: { transform: "translateX(calc(-50% - 4rem + 3rem))" },
         },
         "infinite-scroll-reverse": {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(50%)" },
+          from: { transform: "translateX(-50%)" },
+          to: { transform: "translateX(0% + 4rem - 3rem)" },
         },
         swing: {
           from: { transform: "rotate(10deg)" },

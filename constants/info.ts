@@ -13,6 +13,59 @@ export const info = {
   whatsapp: "https://wa.me/9803522141",
 };
 
+export const logos = [
+  {
+    text: "Python",
+    url: "https://www.python.org/",
+    feature_image: "/logos/python.png",
+  },
+  {
+    text: "HTML",
+    url: "https://www.w3schools.com/html/",
+    feature_image: "/logos/html5.png",
+  },
+  {
+    text: "CSS",
+    url: "https://www.w3schools.com/css/",
+    feature_image: "/logos/css.png",
+  },
+  {
+    text: "JS",
+    url: "https://www.w3schools.com/js/",
+    feature_image: "/logos/js.png",
+  },
+  {
+    text: "Nodejs",
+    url: "https://nodejs.org/",
+    feature_image: "/logos/nodejs.svg",
+  },
+  {
+    text: "React",
+    url: "https://react.dev/",
+    feature_image: "/logos/react.png",
+  },
+  {
+    text: "Nextjs",
+    url: "https://nextjs.org/",
+    feature_image: "/logos/nextjs.png",
+  },
+  {
+    text: "PHP",
+    url: "https://www.w3schools.com/PHP/",
+    feature_image: "/logos/php.png",
+  },
+  {
+    text: "WordPress",
+    url: "https://wordpress.org/",
+    feature_image: "/logos/wordpress.png",
+  },
+  {
+    text: "CodeIgniter",
+    url: "https://codeigniter.com/",
+    feature_image: "/logos/codeigniter.png",
+  },
+];
+
 export const resume = {
   personal: {
     fname: "Ajay",

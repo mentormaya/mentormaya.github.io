@@ -4,60 +4,32 @@ import Image from "next/image";
 import { Nunito } from "next/font/google";
 
 import { cn } from "@/helper/utils";
+import {
+  CardItemProps,
+  ElementProps,
+  ItemProps,
+  Props,
+} from "@/components/props/slider";
 
 const nunito = Nunito({
   subsets: ["latin"],
 });
-
-interface Content {
-  feature_image: string;
-  text: string;
-  url: string;
-}
-
-interface Props {
-  title?: string;
-  type: string;
-  content: Content[];
-  animated?: boolean;
-  left?: boolean;
-  variant?: string;
-  hover?: boolean;
-}
-
-interface ItemProps {
-  item: string;
-  variant?: string;
-  hidden?: boolean;
-  border?: boolean;
-  style?: boolean;
-  className?: string;
-  link?: string;
-}
-
-interface ElementProps {
-  type: string;
-  content: Content[];
-  variant?: string;
-}
-
-interface CardItemProps {
-  title: string;
-  image: string;
-  url: string;
-  hidden?: boolean;
-}
 
 const CardItem = async ({
   title,
   image,
   url,
   hidden = false,
+  logo = false,
 }: CardItemProps) => {
   return (
     <li
       key={url ?? title}
-      className="bg-secondary-light bg-opacity-30 h-28 w-40 rounded-xl cursor-pointer relative border-2 border-primary-light shadow-lg shadow-primary-light"
+      className={cn(
+        "cursor-pointer relative",
+        !logo &&
+          "bg-secondary-light bg-opacity-30 h-28 w-40 rounded-xl border-2 border-primary-light shadow-lg shadow-primary-light"
+      )}
       aria-hidden={hidden}
     >
       <Link href={url}>
@@ -66,11 +38,14 @@ const CardItem = async ({
           alt="Feature Image"
           height={80}
           width={150}
-          className="rounded-xl h-full w-full"
+          className={cn(!logo && "rounded-xl h-full w-full")}
+          style={logo ? { height: "60px", width: "auto" } : {}}
         />
-        <p className="absolute w-full bottom-0 bg-primary-light bg-opacity-60 text-sm text-secondary-light p-1 rounded-md rounded-t-none">
-          {title}
-        </p>
+        {!logo && (
+          <p className="absolute w-full bottom-0 bg-primary-light bg-opacity-60 text-sm text-secondary-light p-1 rounded-md rounded-t-none">
+            {title}
+          </p>
+        )}
       </Link>
     </li>
   );
@@ -178,6 +153,38 @@ function Elements({ type, content, variant }: ElementProps) {
               image={item.feature_image}
               url={item.url}
               hidden
+            />
+          ))}
+        </>
+      );
+    case "logo":
+      return (
+        <>
+          {content.map(item => (
+            <CardItem
+              title={item.text}
+              image={item.feature_image}
+              url={item.url}
+              key={item.url}
+              logo
+            />
+          ))}
+          {content.map(item => (
+            <CardItem
+              title={item.text}
+              image={item.feature_image}
+              url={item.url}
+              hidden
+              logo
+            />
+          ))}
+          {content.map(item => (
+            <CardItem
+              title={item.text}
+              image={item.feature_image}
+              url={item.url}
+              hidden
+              logo
             />
           ))}
         </>

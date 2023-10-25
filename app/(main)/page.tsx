@@ -1,6 +1,5 @@
 import Heading, { SectionHeading } from "@/components/sections/heading";
 import Hero from "@/components/sections/hero";
-import Logos from "@/components/sections/logos";
 import Skills from "@/components/sections/skills";
 import Slider from "@/components/sections/slider";
 
@@ -13,7 +12,6 @@ export default function Home() {
       <Heading title="Home Page" />
       <Hero options={options} description={description} />
       <Skills />
-      <Logos />
       <section>Experiences</section>
       <section>
         <SectionHeading title="From the Blog: Latest Posts" />
