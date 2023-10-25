@@ -18,16 +18,35 @@ function Skills() {
             {resume.proffessional.skills.map(skill => {
               return (
                 <li
-                  className="w-1/2 grid grid-cols-[60px_1fr] justify-center items-center py-4 px-8"
+                  className="w-1/2 grid grid-cols-[60px_1fr] justify-center py-4 px-8"
                   key={skill.name}
                 >
-                  <div className="mr-2">
-                    <Image
-                      src={skill.image}
-                      alt={skill.name}
-                      width={60}
-                      height={60}
-                    />
+                  <div className={cn("mr-4", skill.images && "mr-8")}>
+                    {skill.images &&
+                      skill.images.map((image, index) => (
+                        <Image
+                          key={image}
+                          src={image}
+                          alt={skill.name}
+                          width={60}
+                          height={60}
+                          className={cn(
+                            "rounded-full",
+                            index === 1 && "-m-4 -rotate-45",
+                            index === 2 && "-my-2 rotate-45"
+                          )}
+                        />
+                      ))}
+                    {skill.image && (
+                      <Image
+                        key={skill.image}
+                        src={skill.image}
+                        alt={skill.name}
+                        width={60}
+                        height={60}
+                        className={cn("rounded-full")}
+                      />
+                    )}
                   </div>
                   <div className="skill-set__detail">
                     <div className="mb-[0.8rem] flex justify-between">
@@ -44,7 +63,7 @@ function Skills() {
                         <span className="">{skill.rating_unit ?? "%"}</span>
                       </p>
                     </div>
-                    <div className="w-full h-2 bg-white rounded-md shadow-md">
+                    <div className="w-full h-2 bg-white rounded-md shadow-md cursor-pointer">
                       <div
                         className={cn(
                           "h-full bg-gradient-to-r from-[#072142] via-[#8c2b7a] to-[#ff4d5a] rounded-md"
