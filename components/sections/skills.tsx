@@ -32,8 +32,8 @@ function Skills() {
                           height={60}
                           className={cn(
                             "rounded-full",
-                            index === 1 && "-m-4 -rotate-45",
-                            index === 2 && "-my-2 rotate-45"
+                            index === 1 && "-m-4 -rotate-45 relative",
+                            index === 2 && "-my-4 rotate-45 relative"
                           )}
                         />
                       ))}
@@ -63,7 +63,7 @@ function Skills() {
                         <span className="">{skill.rating_unit ?? "%"}</span>
                       </p>
                     </div>
-                    <div className="w-full h-2 bg-white rounded-md shadow-md cursor-pointer">
+                    <div className="w-full h-2 bg-white rounded-md shadow-md cursor">
                       <div
                         className={cn(
                           "h-full bg-gradient-to-r from-[#072142] via-[#8c2b7a] to-[#ff4d5a] rounded-md"

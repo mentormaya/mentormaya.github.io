@@ -13,10 +13,7 @@ export default function Home() {
       <Heading title="Home Page" />
       <Hero options={options} description={description} />
       <Skills />
-      <section>
-        <SectionHeading title="Work(ed) with" />
-        <Logos />
-      </section>
+      <Logos />
       <section>Experiences</section>
       <section>
         <SectionHeading title="From the Blog: Latest Posts" />
