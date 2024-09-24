@@ -1,4 +1,6 @@
 ---
 layout: home
 ---
-# Hello from home
+# New Site Comming Soon!
+
+## Stay tuned
