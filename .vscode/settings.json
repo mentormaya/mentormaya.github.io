@@ -1,0 +1,24 @@
+{
+  "cSpell.words": [
+    "aarch",
+    "ajaykumar",
+    "bigdecimal",
+    "colorator",
+    "comming",
+    "devcontainer",
+    "devcontainers",
+    "eventmachine",
+    "forwardable",
+    "fsevent",
+    "inotify",
+    "mentormaya",
+    "pathutil",
+    "protobuf",
+    "rexml",
+    "sissel",
+    "strscan",
+    "webrick"
+  ],
+  "files.eol": "\r\n",
+  "editor.unfoldOnClickAfterEndOfLine": true
+}

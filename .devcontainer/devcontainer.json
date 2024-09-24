@@ -1,0 +1,50 @@
+{
+  "name": "Jekyll",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {},
+  "containerEnv": {
+    "TZ": "Asia/Kathmandu"
+  },
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [
+    // Jekyll server
+    4000,
+    // Live reload server
+    35729
+  ],
+
+  "mounts": [
+    {
+      "source": "${localEnv:HOME}${localEnv:USERPROFILE}/.ssh",
+      "target": "/root/.ssh",
+      "type": "bind"
+    }
+  ],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postStartCommand": "sh .devcontainer/post-start.sh ${containerWorkspaceFolder}",
+  "postCreateCommand": "sh .devcontainer/post-create.sh",
+
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "shopify.ruby-lsp",
+        "sissel.shopify-liquid",
+        "GitHub.copilot",
+        "GitHub.vscode-pull-request-github",
+        "streetsidesoftware.code-spell-checker"
+      ],
+      "settings": {
+        "files.eol": "\r\n",
+        "editor.unfoldOnClickAfterEndOfLine": true
+      }
+    }
+  },
+
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  "remoteUser": "root"
+}
