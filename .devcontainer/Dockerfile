@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/jekyll:0-bullseye
+FROM mcr.microsoft.com/devcontainers/jekyll:latest
 
 ENV TZ=Asia/Kathmandu
 
