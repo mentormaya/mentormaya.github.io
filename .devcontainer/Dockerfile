@@ -1,8 +1,35 @@
-FROM mcr.microsoft.com/devcontainers/jekyll:2-bullseye
+FROM ruby:3.3.4-bullseye
+
+ARG USERNAME=ajay
+ARG USER_UID=1000
+ARG USER_GID=$USER_UID
 
 ENV TZ=Asia/Kathmandu
+ENV GEM_HOME=/home/$USERNAME/.bundle
+ENV PATH=$GEM_HOME/bin:$PATH
+ENV BUNDLE_PATH=$GEM_HOME
 
-RUN apt-get update && apt-get upgrade -y
+RUN apt-get update && apt-get upgrade -y && \
+    apt-get install -y nodejs npm sudo && \
+    npm install -g yarn
+
+# Create the user
+RUN groupadd --gid $USER_GID $USERNAME \
+    && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME \
+    && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
+    && chmod 0440 /etc/sudoers.d/$USERNAME
+
+# Set up bundler
+RUN mkdir -p $GEM_HOME \
+    && chown -R $USERNAME:$USERNAME $GEM_HOME
+
+# Install Jekyll and Bundler
+RUN gem install jekyll bundler
+
+# Set the default user
+USER $USERNAME
+
+WORKDIR /workspace
 
 EXPOSE 4000
 EXPOSE 35729
