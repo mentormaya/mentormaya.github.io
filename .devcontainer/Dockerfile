@@ -9,27 +9,27 @@ ENV GEM_HOME=/home/$USERNAME/.bundle
 ENV PATH=$GEM_HOME/bin:$PATH
 ENV BUNDLE_PATH=$GEM_HOME
 
-RUN apt-get update && apt-get upgrade -y && \
-    apt-get install -y nodejs npm sudo && \
-    npm install -g yarn
-
-# Create the user
+# Create the user first
 RUN groupadd --gid $USER_GID $USERNAME \
     && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME \
+    && apt-get update \
+    && apt-get install -y sudo nodejs npm \
+    && npm install -g yarn \
     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 
-# Set up bundler
+# Set up bundler directory
 RUN mkdir -p $GEM_HOME \
     && chown -R $USERNAME:$USERNAME $GEM_HOME
 
-# Install Jekyll and Bundler
-RUN gem install jekyll bundler
-
-# Set the default user
+# Switch to non-root user
 USER $USERNAME
 
-WORKDIR /workspace
+# Set working directory
+WORKDIR /home/$USERNAME
+
+# Install Jekyll and Bundler
+RUN gem install jekyll bundler
 
 EXPOSE 4000
 EXPOSE 35729

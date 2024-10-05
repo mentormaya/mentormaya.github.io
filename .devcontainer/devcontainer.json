@@ -1,19 +1,15 @@
 {
-  "name": "GitHub Pages Jekyll",
+  "name": "Jekyll DevContainer",
   "build": {
     "dockerfile": "Dockerfile",
     "args": {
       "USERNAME": "ajay"
     }
   },
-  "features": {},
-  "containerEnv": {
-    "TZ": "Asia/Kathmandu",
-    "GEM_HOME": "/home/ajay/.bundle",
-    "PATH": "/home/ajay/.bundle/bin:${PATH}",
-    "BUNDLE_PATH": "/home/ajay/.bundle"
-  },
   "forwardPorts": [4000, 35729],
+  "remoteUser": "ajay",
+  "workspaceFolder": "/home/ajay/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/ajay/workspace,type=bind",
   "mounts": [
     {
       "source": "${localEnv:HOME}${localEnv:USERPROFILE}/.ssh",
@@ -21,24 +17,23 @@
       "type": "bind"
     }
   ],
-  "postStartCommand": "sh .devcontainer/post-start.sh ${containerWorkspaceFolder}",
-  "postCreateCommand": "sh .devcontainer/post-create.sh",
   "customizations": {
     "vscode": {
       "extensions": [
-        "shopify.ruby-lsp",
         "sissel.shopify-liquid",
-        "GitHub.copilot",
-        "GitHub.vscode-pull-request-github",
-        "streetsidesoftware.code-spell-checker",
         "ginfuru.ginfuru-vscode-jekyll-syntax",
-        "esbenp.prettier-vscode"
+        "streetsidesoftware.code-spell-checker",
+        "esbenp.prettier-vscode",
+        "GitHub.copilot",
+        "GitHub.vscode-pull-request-github"
       ],
       "settings": {
-        "files.eol": "\r\n",
-        "editor.unfoldOnClickAfterEndOfLine": true
+        "files.eol": "\n",
+        "editor.tabSize": 2,
+        "editor.detectIndentation": true,
+        "editor.rulers": [80, 100, 120]
       }
     }
   },
-  "remoteUser": "ajay"
+  "postCreateCommand": "sh .devcontainer/post-create.sh"
 }
