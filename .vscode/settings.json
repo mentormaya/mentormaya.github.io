@@ -22,6 +22,6 @@
     "strscan",
     "webrick"
   ],
-  "files.eol": "\r\n",
+  "files.eol": "\n",
   "editor.unfoldOnClickAfterEndOfLine": true
 }
