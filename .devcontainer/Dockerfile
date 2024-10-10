@@ -33,4 +33,3 @@ RUN gem install jekyll bundler
 
 EXPOSE 4000
 EXPOSE 35729
-
