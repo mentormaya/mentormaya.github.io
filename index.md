@@ -1,6 +1,7 @@
 ---
 layout: home
 ---
-# New Site Comming Soon!
+# New Site Comming Soon
 
 ## Stay tuned
+

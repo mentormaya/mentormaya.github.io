@@ -1,13 +1,30 @@
 title: "Ajay Singh"
 email: admin@ajaysingh.com.np
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
   A basic blog site with jekyll and github pages. More description comming soon.
+
 # baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "https://ajaysingh.com.np" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ajaysingh.com.np"
+
 twitter_username: singh_ajaykumar
-github_username:  mentormaya
+github_username: mentormaya
 
 # Build settings
+markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+
+# Server settings
+host: 0.0.0.0
+port: 4000
+force_polling: true
+
+# Exclude from processing
+exclude:
+  - .devcontainer/
+  - .vscode/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/

@@ -1,38 +1,79 @@
-#!/bin/sh
+#!/bin/bash
 
-# Loading common functions
-. .devcontainer/utils.sh
+set -e
+
+# Function to show banner messages
+banner() {
+    echo "----------------------------------------------------------------------------"
+    echo "$1"
+    echo "----------------------------------------------------------------------------"
+}
 
 banner "Running Post Create Script"
 
-# Install the version of Bundler.
-banner "Installing the version of Bundler"
-if [ -f Gemfile.lock ] && grep "BUNDLED WITH" Gemfile.lock >/dev/null; then
-	tail <Gemfile.lock -n 2 | grep -C2 "BUNDLED WITH" | tail -n 1 | xargs gem install bundler -v
+# Install necessary dependencies
+banner "Installing dependencies"
+gem install bundler jekyll
+
+# Initialize Jekyll site if not already initialized
+if [ ! -f "_config.yml" ]; then
+    banner "Initializing new Jekyll site"
+    jekyll new . --force
+    
+    # Update Gemfile for GitHub Pages
+    cat > Gemfile <<EOL
+source "https://rubygems.org"
+gem "github-pages", group: :jekyll_plugins
+gem "webrick", "~> 1.7"
+group :jekyll_plugins do
+  gem "jekyll-feed", "~> 0.12"
+end
+EOL
 fi
 
-# If there's a Gemfile, then run `bundle install`
-# It's assumed that the Gemfile will install Jekyll too
-if [ -f Gemfile ]; then
-	banner "Gem file found! Running bundle install"
-	bundle install
-else
-	banner "No Gem file found! Skipping bundle install"
+# Install gems
+banner "Installing gems"
+bundle install
+
+# Update _config.yml
+banner "Updating Jekyll configuration"
+cat > _config.yml <<EOL
+# Site settings
+title: Your Site Title
+description: Your site description
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Server settings
+host: 0.0.0.0
+port: 4000
+livereload: true
+livereload_port: 35729
+force_polling: true
+
+# Exclude from processing
+exclude:
+  - .devcontainer/
+  - .vscode/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+EOL
+
+# Adding aliases
+banner "Adding aliases"
+if [ -f $HOME/.bashrc ]; then
+    cat >> $HOME/.bashrc <<EOL
+alias serve='bundle exec jekyll serve --livereload'
+alias build='bundle exec jekyll build'
+EOL
 fi
 
-# Adding aliases for git
-banner "Adding git aliases"
-if [ -f /etc/bash.bashrc ]; then
-  echo "Adding aliases to bashrc"
-  echo "alias addall='git add .'">> /etc/bash.bashrc
-  echo "alias commit='f() { git add . && if [ \"\$1\" = \"\" ]; then read -p \"Commit Message: \" msg; else msg=\"\$1\"; fi && git commit -m \"\$msg\"; }; f'">> /etc/bash.bashrc
-  echo "alias push='f() { commit && git push; }; f'" >> /etc/bash.bashrc
-  echo "alias init='git init'" >> /etc/bash.bashrc
-  echo "alias pull='git pull'" >> /etc/bash.bashrc
-  echo "alias test-ssh='ssh -T git@github.com'" >> /etc/bash.bashrc
-  echo "alias debug-ssh='ssh -vT git@github.com'" >> /etc/bash.bashrc
-  echo "alias kill-gpg='gpgconf --kill gpg-agent'" >> /etc/bash.bashrc
-  verifyln "Failed to add aliases to bashrc"
-else
-  echo "No bashrc file found!"
-fi
+banner "Post-create script completed successfully"

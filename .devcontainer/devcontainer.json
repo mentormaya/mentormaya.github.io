@@ -1,50 +1,52 @@
 {
-  "name": "Jekyll",
+  "name": "Jekyll DevContainer",
   "build": {
-    "dockerfile": "Dockerfile"
+    "dockerfile": "Dockerfile",
+    "args": {
+      "USERNAME": "ajay"
+    }
   },
-  "features": {},
-  "containerEnv": {
-    "TZ": "Asia/Kathmandu"
+  "forwardPorts": [4000, 35729],
+  "portsAttributes": {
+    "4000": {
+      "label": "Jekyll Server",
+      "onAutoForward": "notify"
+    },
+    "35729": {
+      "label": "Live Reload",
+      "onAutoForward": "silent"
+    }
   },
-
-  // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  "forwardPorts": [
-    // Jekyll server
-    4000,
-    // Live reload server
-    35729
-  ],
-
+  "remoteUser": "ajay",
+  "workspaceFolder": "/home/ajay/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/ajay/workspace,type=bind",
   "mounts": [
     {
       "source": "${localEnv:HOME}${localEnv:USERPROFILE}/.ssh",
-      "target": "/root/.ssh",
+      "target": "/home/ajay/.ssh",
       "type": "bind"
     }
   ],
-
-  // Use 'postCreateCommand' to run commands after the container is created.
-  "postStartCommand": "sh .devcontainer/post-start.sh ${containerWorkspaceFolder}",
-  "postCreateCommand": "sh .devcontainer/post-create.sh",
-
-  // Configure tool-specific properties.
   "customizations": {
     "vscode": {
       "extensions": [
-        "shopify.ruby-lsp",
         "sissel.shopify-liquid",
+        "ginfuru.ginfuru-vscode-jekyll-syntax",
+        "streetsidesoftware.code-spell-checker",
+        "esbenp.prettier-vscode",
         "GitHub.copilot",
-        "GitHub.vscode-pull-request-github",
-        "streetsidesoftware.code-spell-checker"
+        "GitHub.vscode-pull-request-github"
       ],
       "settings": {
-        "files.eol": "\r\n",
-        "editor.unfoldOnClickAfterEndOfLine": true
+        "files.eol": "\n",
+        "editor.tabSize": 2,
+        "editor.detectIndentation": true,
+        "editor.rulers": [80, 100, 120]
       }
     }
   },
-
-  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-  "remoteUser": "root"
+  "postCreateCommand": "sh .devcontainer/post-create.sh",
+  "postAttachCommand": {
+    "server": "bundle exec jekyll serve --livereload"
+  }
 }
