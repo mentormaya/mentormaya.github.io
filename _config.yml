@@ -20,6 +20,10 @@ host: 0.0.0.0
 port: 4000
 force_polling: true
 
+# Include files for processing
+include:
+  - assets/LsmW7-3QeIVH-vGDyD-s5
+
 # Exclude from processing
 exclude:
   - .devcontainer/

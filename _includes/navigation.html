@@ -1,0 +1,7 @@
+<nav class="animate-fade-in">
+  <ul class="flex items-center justify-center gap-4">
+    {% for item in site.data.navigation %}
+    <li><a class="duration-500 text-zinc-500 hover:text-zinc-300" href={{ item.href }}>{{ item.name }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>

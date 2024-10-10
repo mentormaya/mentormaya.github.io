@@ -1,20 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: " en" }}" class="__className_829c8b">
 
-  {%- include head.html -%}
+{%- include head.html -%}
 
-  <body>
+<body class="bg-black text-white">
+  {%- include particles.html -%}
 
-    {%- include header.html -%}
+  {{ content }}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
-
-    {%- include footer.html -%}
-
-  </body>
+  {%- include footer.html -%}
+</body>
 
 </html>
