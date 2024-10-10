@@ -7,6 +7,16 @@
     }
   },
   "forwardPorts": [4000, 35729],
+  "portsAttributes": {
+    "4000": {
+      "label": "Jekyll Server",
+      "onAutoForward": "notify"
+    },
+    "35729": {
+      "label": "Live Reload",
+      "onAutoForward": "silent"
+    }
+  },
   "remoteUser": "ajay",
   "workspaceFolder": "/home/ajay/workspace",
   "workspaceMount": "source=${localWorkspaceFolder},target=/home/ajay/workspace,type=bind",
@@ -35,5 +45,8 @@
       }
     }
   },
-  "postCreateCommand": "sh .devcontainer/post-create.sh"
+  "postCreateCommand": "sh .devcontainer/post-create.sh",
+  "postAttachCommand": {
+    "server": "bundle exec jekyll serve --livereload"
+  }
 }
