@@ -11,22 +11,13 @@ banner "Running Post Create Script"
 
 # Install necessary dependencies
 banner "Installing dependencies"
-gem install bundler jekyll
+gem install bundler 
+gem install jekyll -v 3.10.0
 
 # Initialize Jekyll site if not already initialized
 if [ ! -f "_config.yml" ]; then
     banner "Initializing new Jekyll site"
     jekyll new . --force
-    
-    # Update Gemfile for GitHub Pages
-    cat > Gemfile <<EOL
-source "https://rubygems.org"
-gem "github-pages", group: :jekyll_plugins
-gem "webrick", "~> 1.7"
-group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
-end
-EOL
 fi
 
 # Install gems
