@@ -1,7 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-
     activesupport (7.2.1)
       base64
       bigdecimal
@@ -42,7 +41,6 @@ GEM
       logger
     faraday-net_http (3.3.0)
       net-http
-
     ffi (1.17.0-aarch64-linux-gnu)
     ffi (1.17.0-aarch64-linux-musl)
     ffi (1.17.0-arm-linux-gnu)
@@ -224,7 +222,6 @@ GEM
       html-pipeline (~> 2.2)
       jekyll (>= 3.0, < 5.0)
     json (2.7.2)
-
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -318,4 +315,3 @@ DEPENDENCIES
 
 BUNDLED WITH
    2.5.21
-
