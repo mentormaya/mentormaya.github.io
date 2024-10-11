@@ -1,14 +1,15 @@
 ---
 layout: default
 ---
-<article class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-  </header>
-
-  <div class="post-content">
+<div class="relative my-6">
+  {%- include header.html -%}
+  <div class="container pt-8 mx-auto lg:pt-12 px-2 mb-12">
     {{ content }}
   </div>
-
-</article>
+  {%- include footer.html -%}
+  {%- include scripts/common.html -%}
+  {% if page.script %}
+  {% assign script_path = page.script | prepend: 'scripts/' | append: '.html' %}
+  {% include {{ script_path }} %}
+  {% endif %}
+</div>
