@@ -8,6 +8,12 @@
   <div class="relative">
     {{ content }}
   </div>
+  {%- include footer.html -%}
+  {% if page.script %}
+  {%- include scripts/common.html -%}
+  {% assign script_path = page.script | prepend: 'scripts/' | append: '.html' %}
+  {% include {{ script_path }} %}
+  {% endif %}
 </body>
 
 </html>

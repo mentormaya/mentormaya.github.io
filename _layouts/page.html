@@ -6,10 +6,4 @@ layout: default
   <div class="container pt-8 mx-auto lg:pt-12 px-2 mb-12">
     {{ content }}
   </div>
-  {%- include footer.html -%}
-  {%- include scripts/common.html -%}
-  {% if page.script %}
-  {% assign script_path = page.script | prepend: 'scripts/' | append: '.html' %}
-  {% include {{ script_path }} %}
-  {% endif %}
 </div>
