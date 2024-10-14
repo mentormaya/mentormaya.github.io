@@ -2,6 +2,7 @@
 title: Resume
 permalink: /resume.html
 layout: page
+script: resume
 ---
 
 <main class="flex flex-1 gap-4">

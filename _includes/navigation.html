@@ -1,12 +1,12 @@
 {% assign homepage_urls = '/, /index.html' | split: ', ' %}
 <nav class="animate-fade-in{% unless homepage_urls contains page.url %} duration-75{% endunless %}">
   <ul class="flex items-center justify-center gap-4">
-    {% for item in site.data.navigation %}
-    {% assign itemUrlWithHtml = item.href | append: '.html' %}
+    {% for menu in site.data.navigation.menus %}
+    {% assign menuUrlWithHtml = menu.href | append: '.html' %}
     <li>
-      <a href="{{ item.href }}"
-        class="duration-500 {% if page.url == itemUrlWithHtml or page.url == item.href %}text-zinc-300 hover:text-purple-600{% else %}text-zinc-500 hover:text-zinc-300{% endif %}">
-        {{ item.name }}
+      <a href="{{ menu.href }}"
+        class="duration-500 {% if page.url == menuUrlWithHtml or page.url == menu.href %}text-zinc-300 hover:text-purple-600{% else %}text-zinc-500 hover:text-zinc-300{% endif %}">
+        {{ menu.name }}
       </a>
     </li>
     {% endfor %}
