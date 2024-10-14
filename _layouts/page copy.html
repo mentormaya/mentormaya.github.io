@@ -1,11 +1,12 @@
 ---
-layout: default
 ---
 <div class="relative">
   <div class="relative my-6">
     {%- include sections/header.html -%}
     <div class="container pt-8 mx-auto lg:pt-12 px-2 mb-12">
-      {{ content }}
+      <p>Here is the content for {{ page.title }}</p>
     </div>
   </div>
 </div>
+{%- include scripts/common.html -%}
+{%- include scripts/resume.html -%}

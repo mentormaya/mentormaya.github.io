@@ -5,7 +5,7 @@
     {% assign menuUrlWithHtml = menu.href | append: '.html' %}
     <li>
       <a href="{{ menu.href }}"
-        class="duration-500 {% if page.url == menuUrlWithHtml or page.url == menu.href %}text-zinc-300 hover:text-purple-600{% else %}text-zinc-500 hover:text-zinc-300{% endif %}">
+        class="duration-500 {% if page.url == menuUrlWithHtml or page.url == menu.href %}text-purple-600 hover:text-zinc-300{% else %}text-zinc-500 hover:text-zinc-300{% endif %}">
         {{ menu.name }}
       </a>
     </li>

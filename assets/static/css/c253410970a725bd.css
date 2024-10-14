@@ -1,1 +1,18 @@
-@font-face{font-family:__tomatoes_7a5cd7;src:url(/assets/static/media/6731aa9b2e80ca6d-s.p.ttf) format("truetype");font-display:swap}@font-face{font-family:__tomatoes_Fallback_7a5cd7;src:local("Arial");ascent-override:122.11%;descent-override:73.74%;line-gap-override:1.87%;size-adjust:117.84%}.__className_7a5cd7{font-family:__tomatoes_7a5cd7,__tomatoes_Fallback_7a5cd7}
+@font-face {
+  font-family: __tomatoes_7a5cd7;
+  src: url(/assets/static/media/6731aa9b2e80ca6d-s.p.ttf) format("truetype");
+  font-display: swap
+}
+
+@font-face {
+  font-family: __tomatoes_Fallback_7a5cd7;
+  src: local("Arial");
+  ascent-override: 122.11%;
+  descent-override: 73.74%;
+  line-gap-override: 1.87%;
+  size-adjust: 117.84%
+}
+
+.__className_7a5cd7 {
+  font-family: __tomatoes_7a5cd7, __tomatoes_Fallback_7a5cd7
+}

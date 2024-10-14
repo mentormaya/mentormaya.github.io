@@ -1,0 +1,36 @@
+<script>
+  function toCapitalCase(str) {
+    return str.replace(/\b\w/g, function (char) {
+      return char.toUpperCase();
+    });
+  }
+  function setTheme() {
+    try {
+      var d = document.documentElement,
+        n = 'data-theme',
+        s = 'setAttribute';
+      var e = localStorage.getItem('theme');
+      if ('system' === e || (!e && true)) {
+        var t = '(prefers-color-scheme: dark)',
+          m = window.matchMedia(t);
+        if (m.media !== t || m.matches) {
+          d.style.colorScheme = 'dark';
+          console.log("Theme set to System: Dark Mode")
+          d[s](n, 'dark')
+        } else {
+          d.style.colorScheme = 'light';
+          console.log("Theme set to System: Light Mode")
+          d[s](n, 'light')
+        }
+      } else if (e) {
+        console.log(`Theme set to ${toCapitalCase(e)} Mode`)
+        d[s](n, e || '')
+      }
+      if (e === 'light' || e === 'dark') d.style.colorScheme = e
+    } catch (e) {
+      console.log("Error toggling theme!");
+      console.log(e)
+    }
+  }
+  !setTheme()
+</script>
