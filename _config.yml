@@ -12,6 +12,7 @@ github_username: mentormaya
 # Build settings
 markdown: kramdown
 theme: minima
+permalink: pretty
 plugins:
   - jekyll-feed
 

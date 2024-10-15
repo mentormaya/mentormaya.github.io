@@ -1,0 +1,29 @@
+# In a plugin file, e.g., _plugins/generate_project_pages.rb
+# module Jekyll
+#   class ProjectPageGenerator < Generator
+#     safe true
+
+#     def generate(site)
+#       # Assume you have a _data/projects.yml file with project info
+#       projects = site.data['projects']
+      
+#       projects.each do |project|
+#         site.pages << ProjectPage.new(site, site.source, 'projects', project)
+#       end
+#     end
+#   end
+
+#   class ProjectPage < Page
+#     def initialize(site, base, dir, project)
+#       @site = site
+#       @base = base
+#       @dir = dir
+#       @name = "#{project['name']}.html"
+
+#       self.process(@name)
+#       self.read_yaml(File.join(base, '_layouts'), 'project_details.html')
+#       self.data['title'] = project['name']
+#       self.data['project_name'] = project['name']
+#     end
+#   end
+# end

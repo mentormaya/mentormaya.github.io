@@ -1,6 +1,6 @@
 ---
 title: Resume
-permalink: /resume.html
+permalink: /resume
 layout: page
 script: resume
 ---

@@ -1,6 +1,6 @@
 ---
 title: About me
-permalink: about.html
+permalink: about
 layout: page
 script: about
 ---
