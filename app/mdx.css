@@ -1,0 +1,38 @@
+[data-rehype-pretty-code-figure]>pre>code {
+  counter-reset: line;
+}
+
+[data-rehype-pretty-code-figure]>pre>code>[data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 1rem;
+  margin-right: 2rem;
+  text-align: right;
+  color: gray;
+}
+
+[data-rehype-pretty-code-figure]>pre>code[data-line-numbers-max-digits="2"]>[data-line]::before {
+  width: 2rem;
+}
+
+[data-rehype-pretty-code-figure]>pre>code[data-line-numbers-max-digits="3"]>[data-line]::before {
+  width: 3rem;
+}
+
+/* Inline Code */
+span[data-rehype-pretty-code-figure]>code {
+  @apply px-2 rounded;
+}
+
+.contains-task-list {
+  @apply list-none text-zinc-300;
+}
+
+.contains-task-list>li {
+  @apply flex gap-3;
+}
+
+.contains-task-list>li>input[type="checkbox"] {
+  @apply w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded;
+}
