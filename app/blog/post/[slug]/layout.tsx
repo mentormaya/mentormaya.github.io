@@ -1,6 +1,6 @@
 import RightSideBar from "./r-side";
 import LeftSideBar from "./l-side";
-import { Post, posts } from "@/data/blog";
+import { Post, allPosts as posts } from "@/.contentlayer/generated";
 
 type Props = {
   children: React.ReactNode;

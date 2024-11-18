@@ -1,17 +1,54 @@
-import React from 'react'
-import { cn } from '@/lib/utils'
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+import React from "react";
 
-const Footer = () => {
-  return (
-    <footer className={cn(
-      "flex justify-center items-center",
-      "bg-primary-100 text-white",
-    )}>
-      <p>
-        &copy; 2021 Ajay Singh. All rights reserved.
-      </p>
-    </footer>
-  )
+interface Props {
+  duration?: number;
 }
 
-export default Footer
+const Footer = ({ duration = 1000 }: Props) => {
+  return (
+    <footer className="fixed bottom-0 left-0 w-full flex justify-between items-center">
+      <div
+        className={cn(
+          "p-4 text-sm text-zinc-500 animate-fade-in",
+          ` duration-${duration}`
+        )}
+      >
+        <p className="text-center">
+          Made with ❤️ in <span className="text-2xl">🇳🇵</span> and hosted by{" "}
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com"
+            title="GitHub"
+            className="duration-500 hover:text-zinc-300"
+          >
+            GitHub
+          </Link>
+        </p>
+      </div>
+
+      <div
+        className={cn(
+          "p-4 text-sm text-zinc-500 animate-fade-in duration-1000",
+          `duration-${duration}`
+        )}
+      >
+        <p className="text-center">
+          &copy; {new Date().getFullYear()}{" "}
+          <Link
+            target="_blank"
+            href="/contact"
+            className="duration-500 hover:text-zinc-300"
+          >
+            Ajay Singh
+          </Link>
+          . All rights reserved.
+        </p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

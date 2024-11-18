@@ -1,0 +1,27 @@
+{
+  "title": "Getting Started with Docker for Developers",
+  "excerpt": "Learn how Docker simplifies the development process by enabling containerization of applications.",
+  "author": "John Adams",
+  "tags": [
+    "Docker",
+    "Containerization",
+    "DevOps"
+  ],
+  "slug": "getting-started-with-docker",
+  "created_at": "2023-10-01T10:00:00Z",
+  "updated_at": "2023-10-02T12:00:00Z\r",
+  "body": {
+    "raw": "\r\n# Getting Started with Docker for Developers\r\n\r\nDocker is a platform that allows developers to automate the deployment of applications inside lightweight, portable containers. By isolating an application and its dependencies, Docker ensures that it runs the same regardless of the environment.\r\n\r\n## Why Docker?\r\n\r\n1. **Consistency**: Docker containers bundle an application and its dependencies into one consistent environment across all stages of development, testing, and production.\r\n2. **Portability**: Containers are platform-agnostic and can run on any system that supports Docker.\r\n3. **Efficiency**: Docker containers use fewer resources than virtual machines, enabling faster startup times and more efficient scaling.\r\n\r\n## Basic Docker Workflow\r\n\r\n1. **Install Docker**: Begin by installing Docker on your system from the [official Docker website\r\n   ](https: //www.docker.com/).\r\n2. **Create a Dockerfile**: A Dockerfile defines the steps to create an image of your application. Example for a Node.js app:\r\n\r\n```\r\nFROM node: 14\r\nWORKDIR /app\r\nCOPY package*.json ./\r\nRUN npm install\r\nCOPY . .\r\nCMD [\r\n    \"node\",\r\n    \"app.js\"\r\n  ]\r\n```\r\n\r\n3. **Build and Run a Container**:\r\n\r\n```\r\ndocker build -t my-app .\r\ndocker run -p 3000: 3000 my-app\r\n```\r\n\r\n4. **Docker Compose**: For multi-container applications, Docker Compose allows you to define and run containers with a single command using a `docker-compose.yml` file.\r\n\r\n## Conclusion\r\n\r\nDocker has transformed the way developers build, test, and deploy applications by simplifying the development workflow. By learning Docker, you'll gain the ability to create consistent and portable applications that run anywhere, making it an essential tool in modern software development.\r\n",
+    "html": "<h1>Getting Started with Docker for Developers</h1>\n<p>Docker is a platform that allows developers to automate the deployment of applications inside lightweight, portable containers. By isolating an application and its dependencies, Docker ensures that it runs the same regardless of the environment.</p>\n<h2>Why Docker?</h2>\n<ol>\n<li><strong>Consistency</strong>: Docker containers bundle an application and its dependencies into one consistent environment across all stages of development, testing, and production.</li>\n<li><strong>Portability</strong>: Containers are platform-agnostic and can run on any system that supports Docker.</li>\n<li><strong>Efficiency</strong>: Docker containers use fewer resources than virtual machines, enabling faster startup times and more efficient scaling.</li>\n</ol>\n<h2>Basic Docker Workflow</h2>\n<ol>\n<li><strong>Install Docker</strong>: Begin by installing Docker on your system from the [official Docker website\r\n](https: //www.docker.com/).</li>\n<li><strong>Create a Dockerfile</strong>: A Dockerfile defines the steps to create an image of your application. Example for a Node.js app:</li>\n</ol>\n<pre><code>FROM node: 14\r\nWORKDIR /app\r\nCOPY package*.json ./\r\nRUN npm install\r\nCOPY . .\r\nCMD [\r\n    \"node\",\r\n    \"app.js\"\r\n  ]\n</code></pre>\n<ol start=\"3\">\n<li><strong>Build and Run a Container</strong>:</li>\n</ol>\n<pre><code>docker build -t my-app .\r\ndocker run -p 3000: 3000 my-app\n</code></pre>\n<ol start=\"4\">\n<li><strong>Docker Compose</strong>: For multi-container applications, Docker Compose allows you to define and run containers with a single command using a <code>docker-compose.yml</code> file.</li>\n</ol>\n<h2>Conclusion</h2>\n<p>Docker has transformed the way developers build, test, and deploy applications by simplifying the development workflow. By learning Docker, you'll gain the ability to create consistent and portable applications that run anywhere, making it an essential tool in modern software development.</p>"
+  },
+  "_id": "posts/getting-started-with-docker.mdx",
+  "_raw": {
+    "sourceFilePath": "posts/getting-started-with-docker.mdx",
+    "sourceFileName": "getting-started-with-docker.mdx",
+    "sourceFileDir": "posts",
+    "contentType": "mdx",
+    "flattenedPath": "posts/getting-started-with-docker"
+  },
+  "type": "Post",
+  "url": "/posts/getting-started-with-docker"
+}

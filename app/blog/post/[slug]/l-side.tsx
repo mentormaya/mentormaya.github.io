@@ -1,7 +1,7 @@
 import { compileMDX } from "next-mdx-remote/rsc";
 
 import { Separator } from "@/components/ui/separator";
-import { Post } from "@/data/blog";
+import { Post } from "@/.contentlayer/generated";
 import { getTOC, TOCItem } from "@/lib/posts";
 import TOCList from "@/components/blog/toc-list";
 
@@ -14,7 +14,7 @@ interface TOCProps {
 }
 
 const LeftSideBar = async ({ post }: Props) => {
-  const toc = await getTOC(post?.content || "");
+  const toc = await getTOC(post?.body.raw || "");
   return (
     <aside className="flex flex-col justify-center text-center p-4 border border-zinc-600/60 rounded">
       <section className="flex flex-col gap-2">

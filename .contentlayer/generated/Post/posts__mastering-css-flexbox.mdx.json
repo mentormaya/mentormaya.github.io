@@ -1,0 +1,27 @@
+{
+  "title": "Mastering CSS Flexbox: A Complete Guide",
+  "excerpt": "Learn how to create flexible, responsive web layouts using CSS Flexbox.",
+  "author": "Emily Carter",
+  "tags": [
+    "CSS",
+    "Flexbox",
+    "Web Development"
+  ],
+  "slug": "mastering-css-flexbox",
+  "created_at": "2023-09-01T10:00:00Z",
+  "updated_at": "2023-09-02T12:00:00Z\r",
+  "body": {
+    "raw": "\r\n# Mastering CSS Flexbox: A Complete Guide\r\n\r\nFlexbox is a powerful layout module in CSS that allows you to create responsive and flexible layouts with ease. Unlike traditional layout models, Flexbox is designed to distribute space along a single axis and manage alignment, space distribution, and size adjustments more effectively.\r\n\r\n## Basic Concepts of Flexbox\r\n\r\n1. **Flex Container**: The parent element that contains flex items. By setting `display: flex;`, you activate Flexbox for that container.\r\n2. **Flex Items**: The direct children of the flex container.\r\n\r\n### Key Flexbox Properties\r\n\r\n- **flex-direction**: Defines the direction in which flex items are placed (row, column).\r\n\r\n```css\r\n.container {\r\n  display: flex;\r\n  flex-direction: row;\r\n}\r\n```\r\n\r\n- **justify-content**: Aligns flex items horizontally within the flex container (start, center, space-between).\r\n\r\n```css\r\n.container {\r\n  justify-content: space-between;\r\n}\r\n```\r\n\r\n- **align-items**: Aligns flex items vertically within the container (stretch, center, flex-start, flex-end).\r\n\r\n```css\r\n.container {\r\n  align-items: center;\r\n}\r\n```\r\n\r\n- **flex-grow**: Specifies how much a flex item should grow relative to the other items.\r\n\r\n```css\r\n.item {\r\n  flex-grow: 1;\r\n}\r\n```\r\n\r\n## Flexbox Example\r\n\r\nHere's a simple layout using Flexbox:\r\n\r\n```html\r\n<div class=\"container\">\r\n  <div class=\"item\">Item 1</div>\r\n  <div class=\"item\">Item 2</div>\r\n  <div class=\"item\">Item 3</div>\r\n</div>\r\n\r\n<style>\r\n  .container {\r\n    display: flex;\r\n    justify-content: space-around;\r\n    align-items: center;\r\n  }\r\n  .item {\r\n    background-color: #f4f4f4;\r\n    padding: 20px;\r\n    margin: 10px;\r\n  }\r\n</style>\r\n```\r\n\r\n## Conclusion\r\n\r\nMastering Flexbox is essential for creating modern, responsive web designs. With its ability to control the layout, spacing, and alignment of elements, Flexbox has become the go-to layout module for front-end developers.\r\n",
+    "html": "<h1>Mastering CSS Flexbox: A Complete Guide</h1>\n<p>Flexbox is a powerful layout module in CSS that allows you to create responsive and flexible layouts with ease. Unlike traditional layout models, Flexbox is designed to distribute space along a single axis and manage alignment, space distribution, and size adjustments more effectively.</p>\n<h2>Basic Concepts of Flexbox</h2>\n<ol>\n<li><strong>Flex Container</strong>: The parent element that contains flex items. By setting <code>display: flex;</code>, you activate Flexbox for that container.</li>\n<li><strong>Flex Items</strong>: The direct children of the flex container.</li>\n</ol>\n<h3>Key Flexbox Properties</h3>\n<ul>\n<li><strong>flex-direction</strong>: Defines the direction in which flex items are placed (row, column).</li>\n</ul>\n<pre><code class=\"language-css\">.container {\r\n  display: flex;\r\n  flex-direction: row;\r\n}\n</code></pre>\n<ul>\n<li><strong>justify-content</strong>: Aligns flex items horizontally within the flex container (start, center, space-between).</li>\n</ul>\n<pre><code class=\"language-css\">.container {\r\n  justify-content: space-between;\r\n}\n</code></pre>\n<ul>\n<li><strong>align-items</strong>: Aligns flex items vertically within the container (stretch, center, flex-start, flex-end).</li>\n</ul>\n<pre><code class=\"language-css\">.container {\r\n  align-items: center;\r\n}\n</code></pre>\n<ul>\n<li><strong>flex-grow</strong>: Specifies how much a flex item should grow relative to the other items.</li>\n</ul>\n<pre><code class=\"language-css\">.item {\r\n  flex-grow: 1;\r\n}\n</code></pre>\n<h2>Flexbox Example</h2>\n<p>Here's a simple layout using Flexbox:</p>\n<pre><code class=\"language-html\">&#x3C;div class=\"container\">\r\n  &#x3C;div class=\"item\">Item 1&#x3C;/div>\r\n  &#x3C;div class=\"item\">Item 2&#x3C;/div>\r\n  &#x3C;div class=\"item\">Item 3&#x3C;/div>\r\n&#x3C;/div>\r\n\r\n&#x3C;style>\r\n  .container {\r\n    display: flex;\r\n    justify-content: space-around;\r\n    align-items: center;\r\n  }\r\n  .item {\r\n    background-color: #f4f4f4;\r\n    padding: 20px;\r\n    margin: 10px;\r\n  }\r\n&#x3C;/style>\n</code></pre>\n<h2>Conclusion</h2>\n<p>Mastering Flexbox is essential for creating modern, responsive web designs. With its ability to control the layout, spacing, and alignment of elements, Flexbox has become the go-to layout module for front-end developers.</p>"
+  },
+  "_id": "posts/mastering-css-flexbox.mdx",
+  "_raw": {
+    "sourceFilePath": "posts/mastering-css-flexbox.mdx",
+    "sourceFileName": "mastering-css-flexbox.mdx",
+    "sourceFileDir": "posts",
+    "contentType": "mdx",
+    "flattenedPath": "posts/mastering-css-flexbox"
+  },
+  "type": "Post",
+  "url": "/posts/mastering-css-flexbox"
+}

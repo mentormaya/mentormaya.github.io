@@ -1,0 +1,27 @@
+{
+  "title": "Building a RESTful API with Node.js and Express",
+  "excerpt": "Learn how to create a RESTful API using Node.js and Express, two popular tools in modern web development.",
+  "author": "Michael Scott",
+  "tags": [
+    "Node.js",
+    "Express",
+    "API"
+  ],
+  "slug": "building-restful-api-nodejs-express",
+  "created_at": "2023-08-01T10:00:00Z",
+  "updated_at": "2023-08-02T12:00:00Z\r",
+  "body": {
+    "raw": "\r\n# Building a RESTful API with Node.js and Express\r\n\r\nNode.js and Express are powerful tools for building RESTful APIs, enabling developers to create efficient, scalable backends for web and mobile applications.\r\n\r\n## What is a RESTful API?\r\n\r\nA RESTful API (Representational State Transfer) is an architectural style for designing networked applications. It uses HTTP requests to perform CRUD (Create, Read, Update, Delete) operations on resources.\r\n\r\n### Steps to Build a RESTful API\r\n\r\n1. **Install Node.js and Express**: Begin by installing Node.js and setting up an Express project.\r\n\r\n```bash\r\nnpm init\r\nnpm install express\r\n```\r\n\r\n2. **Create Basic Routes**: Define routes for handling different HTTP methods such as GET, POST, PUT, and DELETE.\r\n\r\n```javascript\r\nconst express = require(\"express\");\r\nconst app = express();\r\napp.use(express.json());\r\n\r\napp.get(\"/api/resource\", (req, res) => {\r\n  res.send(\"List of resources\");\r\n});\r\n\r\napp.post(\"/api/resource\", (req, res) => {\r\n  res.send(\"Resource created\");\r\n});\r\n\r\napp.listen(3000, () => {\r\n  console.log(\"Server is running on port 3000\");\r\n});\r\n```\r\n\r\n3. **Connect to a Database**: Use MongoDB or any other database to store your data. You can integrate Mongoose to work with MongoDB.\r\n\r\n```javascript\r\nconst mongoose = require(\"mongoose\");\r\nmongoose.connect(\"mongodb: //localhost/mydb\", {\r\n  useNewUrlParser: true,\r\n  useUnifiedTopology: true,\r\n});\r\n```\r\n\r\n4. **Handle Errors and Middleware**: Implement error handling and middleware to ensure your API is secure and robust.\r\n\r\n```javascript\r\napp.use((err, req, res, next) => {\r\n  console.error(err.stack);\r\n  res.status(500).send(\"Something broke!\");\r\n});\r\n```\r\n\r\n## Conclusion\r\n\r\nBuilding a RESTful API with Node.js and Express is a straightforward and scalable solution for modern web development. With a solid understanding of REST principles and Node.js, you can create APIs that power your applications efficiently.\r\n",
+    "html": "<h1>Building a RESTful API with Node.js and Express</h1>\n<p>Node.js and Express are powerful tools for building RESTful APIs, enabling developers to create efficient, scalable backends for web and mobile applications.</p>\n<h2>What is a RESTful API?</h2>\n<p>A RESTful API (Representational State Transfer) is an architectural style for designing networked applications. It uses HTTP requests to perform CRUD (Create, Read, Update, Delete) operations on resources.</p>\n<h3>Steps to Build a RESTful API</h3>\n<ol>\n<li><strong>Install Node.js and Express</strong>: Begin by installing Node.js and setting up an Express project.</li>\n</ol>\n<pre><code class=\"language-bash\">npm init\r\nnpm install express\n</code></pre>\n<ol start=\"2\">\n<li><strong>Create Basic Routes</strong>: Define routes for handling different HTTP methods such as GET, POST, PUT, and DELETE.</li>\n</ol>\n<pre><code class=\"language-javascript\">const express = require(\"express\");\r\nconst app = express();\r\napp.use(express.json());\r\n\r\napp.get(\"/api/resource\", (req, res) => {\r\n  res.send(\"List of resources\");\r\n});\r\n\r\napp.post(\"/api/resource\", (req, res) => {\r\n  res.send(\"Resource created\");\r\n});\r\n\r\napp.listen(3000, () => {\r\n  console.log(\"Server is running on port 3000\");\r\n});\n</code></pre>\n<ol start=\"3\">\n<li><strong>Connect to a Database</strong>: Use MongoDB or any other database to store your data. You can integrate Mongoose to work with MongoDB.</li>\n</ol>\n<pre><code class=\"language-javascript\">const mongoose = require(\"mongoose\");\r\nmongoose.connect(\"mongodb: //localhost/mydb\", {\r\n  useNewUrlParser: true,\r\n  useUnifiedTopology: true,\r\n});\n</code></pre>\n<ol start=\"4\">\n<li><strong>Handle Errors and Middleware</strong>: Implement error handling and middleware to ensure your API is secure and robust.</li>\n</ol>\n<pre><code class=\"language-javascript\">app.use((err, req, res, next) => {\r\n  console.error(err.stack);\r\n  res.status(500).send(\"Something broke!\");\r\n});\n</code></pre>\n<h2>Conclusion</h2>\n<p>Building a RESTful API with Node.js and Express is a straightforward and scalable solution for modern web development. With a solid understanding of REST principles and Node.js, you can create APIs that power your applications efficiently.</p>"
+  },
+  "_id": "posts/building-restful-api-nodejs-express.mdx",
+  "_raw": {
+    "sourceFilePath": "posts/building-restful-api-nodejs-express.mdx",
+    "sourceFileName": "building-restful-api-nodejs-express.mdx",
+    "sourceFileDir": "posts",
+    "contentType": "mdx",
+    "flattenedPath": "posts/building-restful-api-nodejs-express"
+  },
+  "type": "Post",
+  "url": "/posts/building-restful-api-nodejs-express"
+}

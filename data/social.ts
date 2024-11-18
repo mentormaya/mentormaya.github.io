@@ -35,6 +35,6 @@ export const socialMedia = {
     href: "https://github.com/mentormaya",
     domain: "mentormaya.github.io",
     custom_domain: "ajaysingh.com.np",
-    theme: "https://github.com/mentormaya/jekyll-theme",
+    theme: "https://github.com/mentormaya/portfolio-blog-theme",
   },
 };

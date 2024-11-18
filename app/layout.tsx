@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 import "@/app/globals.css";
-import "@/app/mdx.css"
+import "@/app/mdx.css";
 import { calSans } from "@/components/local-fonts";
-import { ThemeProvider } from "../providers/theme";
+import { ThemeProvider } from "@/providers/theme";
 import { cn } from "@/lib/utils";
 import Particles from "@/components/particles";
 
@@ -85,14 +85,11 @@ export default function RootLayout({
       <body
         className={cn(
           "bg-black text-white",
-          process.env.NODE_ENV === "development" ?? "debug-screens",
+          process.env.NODE_ENV === "development" && "debug-screens"
         )}
       >
         <ThemeProvider>
-          <Particles
-            className="animate-fade-in"
-            quantity={150}
-          />
+          <Particles className="animate-fade-in" quantity={150} />
           {children}
         </ThemeProvider>
       </body>

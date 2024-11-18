@@ -1,0 +1,27 @@
+{
+  "title": "Introduction to Cloud Computing",
+  "excerpt": "Explore the basics of cloud computing, its benefits, and popular cloud service providers.",
+  "author": "Lisa Brown",
+  "tags": [
+    "Cloud Computing",
+    "AWS",
+    "Azure"
+  ],
+  "slug": "introduction-to-cloud-computing",
+  "created_at": "2023-07-01T10:00:00Z",
+  "updated_at": "2023-07-02T12:00:00Z\r",
+  "body": {
+    "raw": "\r\n# Introduction to Cloud Computing\r\n\r\nCloud computing is the on-demand delivery of computing services, such as servers, storage, databases, networking, software, and analytics, over the internet. It allows businesses to use resources without owning and maintaining physical infrastructure.\r\n\r\n## Key Benefits of Cloud Computing\r\n\r\n1. **Cost Savings**: Cloud services allow businesses to avoid the upfront costs of buying hardware and maintaining data centers.\r\n2. **Scalability**: Cloud platforms provide the flexibility to scale resources up or down based on demand.\r\n3. **Global Reach**: Cloud providers have data centers worldwide, enabling businesses to deploy their applications closer to users for improved performance.\r\n4. **Security**: Cloud providers invest heavily in securing their infrastructure, often offering better security than on-premises solutions.\r\n\r\n## Cloud Service Models\r\n\r\n1. **Infrastructure as a Service (IaaS)**: Provides virtualized computing resources, such as servers and storage, over the internet.\r\n2. **Platform as a Service (PaaS)**: Offers a platform for developers to build, test, and deploy applications without managing the underlying infrastructure.\r\n3. **Software as a Service (SaaS)**: Delivers fully managed software applications over the internet, such as Google Workspace or Microsoft 365.\r\n\r\n## Major Cloud Providers\r\n\r\n1. **Amazon Web Services (AWS)**: The largest cloud provider, offering a wide range of services, including compute, storage, databases, and machine learning.\r\n2. **Microsoft Azure**: A cloud platform known for its integration with Microsoft products and services.\r\n3. **Google Cloud Platform (GCP)**: Known for its strengths in data analytics and machine learning services.\r\n\r\n## Conclusion\r\n\r\nCloud computing has transformed the way businesses manage their IT infrastructure by providing flexibility, scalability, and cost-efficiency. By understanding the basics of cloud computing, you can leverage these platforms to drive innovation and growth in your organization.\r\n",
+    "html": "<h1>Introduction to Cloud Computing</h1>\n<p>Cloud computing is the on-demand delivery of computing services, such as servers, storage, databases, networking, software, and analytics, over the internet. It allows businesses to use resources without owning and maintaining physical infrastructure.</p>\n<h2>Key Benefits of Cloud Computing</h2>\n<ol>\n<li><strong>Cost Savings</strong>: Cloud services allow businesses to avoid the upfront costs of buying hardware and maintaining data centers.</li>\n<li><strong>Scalability</strong>: Cloud platforms provide the flexibility to scale resources up or down based on demand.</li>\n<li><strong>Global Reach</strong>: Cloud providers have data centers worldwide, enabling businesses to deploy their applications closer to users for improved performance.</li>\n<li><strong>Security</strong>: Cloud providers invest heavily in securing their infrastructure, often offering better security than on-premises solutions.</li>\n</ol>\n<h2>Cloud Service Models</h2>\n<ol>\n<li><strong>Infrastructure as a Service (IaaS)</strong>: Provides virtualized computing resources, such as servers and storage, over the internet.</li>\n<li><strong>Platform as a Service (PaaS)</strong>: Offers a platform for developers to build, test, and deploy applications without managing the underlying infrastructure.</li>\n<li><strong>Software as a Service (SaaS)</strong>: Delivers fully managed software applications over the internet, such as Google Workspace or Microsoft 365.</li>\n</ol>\n<h2>Major Cloud Providers</h2>\n<ol>\n<li><strong>Amazon Web Services (AWS)</strong>: The largest cloud provider, offering a wide range of services, including compute, storage, databases, and machine learning.</li>\n<li><strong>Microsoft Azure</strong>: A cloud platform known for its integration with Microsoft products and services.</li>\n<li><strong>Google Cloud Platform (GCP)</strong>: Known for its strengths in data analytics and machine learning services.</li>\n</ol>\n<h2>Conclusion</h2>\n<p>Cloud computing has transformed the way businesses manage their IT infrastructure by providing flexibility, scalability, and cost-efficiency. By understanding the basics of cloud computing, you can leverage these platforms to drive innovation and growth in your organization.</p>"
+  },
+  "_id": "posts/introduction-to-cloud-computing.mdx",
+  "_raw": {
+    "sourceFilePath": "posts/introduction-to-cloud-computing.mdx",
+    "sourceFileName": "introduction-to-cloud-computing.mdx",
+    "sourceFileDir": "posts",
+    "contentType": "mdx",
+    "flattenedPath": "posts/introduction-to-cloud-computing"
+  },
+  "type": "Post",
+  "url": "/posts/introduction-to-cloud-computing"
+}

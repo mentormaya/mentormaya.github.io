@@ -1,3 +1,5 @@
+import { withContentlayer } from "next-contentlayer";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   distDir: "build",
@@ -9,4 +11,4 @@ const nextConfig = {
   transpilePackages: ["next-mdx-remote"],
 };
 
-export default nextConfig;
+export default withContentlayer(nextConfig);
