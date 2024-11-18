@@ -6,7 +6,7 @@ import React from 'react'
 
 const AboutPage = () => {
   return (
-    <main className='text-white rounded p-8 flex flex-col gap-8'>
+    <main className='text-white rounded flex flex-col gap-8'>
       <About />
       <Experience />
       <Skills />
