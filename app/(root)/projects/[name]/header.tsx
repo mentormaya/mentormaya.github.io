@@ -77,7 +77,7 @@ const ProjectHeader = ({ project_name }: Props) => {
             : "bg-white/10  border-zinc-200 lg:border-transparent"
             }`}
         >
-          <div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
+          <div className="max-w-[90%] flex flex-row-reverse items-center justify-between py-8 mx-auto">
             <div className="flex justify-between gap-8">
               <span
                 title="View counter for this page"
