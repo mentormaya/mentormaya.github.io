@@ -29,6 +29,12 @@ export interface Project {
   url: string;
   description: string;
   repository?: string;
+  watchers_count?: number;
+  stargazers_count?: number;
+  forks?: number;
+  visibility: string;
+  open_issues?: number;
+  subscribers_count?: number;
   date: string;
   updated_at: string;
   pushed_at: string;

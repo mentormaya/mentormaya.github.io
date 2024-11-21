@@ -3,7 +3,7 @@
 import { socialMedia } from "@/data/social";
 import { fetchProject } from "@/lib/projects";
 import { Project } from "@/types/github";
-import { ArrowLeft, Eye, Github, Twitter } from "lucide-react";
+import { ArrowLeft, Eye, Github, Star, Twitter } from "lucide-react";
 import Link from "next/link";
 import { Suspense, useEffect, useRef, useState } from "react";
 import useSWR from "swr";
@@ -16,13 +16,19 @@ const ProjectHeader = ({ project_name }: Props) => {
   const ref = useRef<HTMLElement>(null);
   const [isIntersecting, setIntersecting] = useState(true);
   const links: { label: string; href: string }[] = [];
-  const views = 10;
+  let views = 0;
+  let stars = 0;
 
   const {
     data: project,
     error,
     isLoading,
   } = useSWR<Project | null>(project_name, fetchProject);
+
+  if (project) {
+    views = project?.watchers_count || views;
+    stars = project?.stargazers_count || stars;
+  }
 
   if (project?.repository) {
     links.push({
@@ -91,13 +97,11 @@ const ProjectHeader = ({ project_name }: Props) => {
                   views,
                 )}
               </span>
-              <Link target="_blank" href={socialMedia.twitter.href}>
-                <Twitter
-                  className={`w-6 h-6 duration-200 hover:font-medium ${isIntersecting
-                    ? " text-zinc-400 hover:text-zinc-100"
-                    : "text-zinc-600 hover:text-zinc-900"
-                    } `}
-                />
+              <Link target="_blank" href={socialMedia.twitter.href} className="flex gap-1 text-zinc-400 hover:text-zinc-100">
+                <Star className="w-5 h-5" />{" "}
+                {Intl.NumberFormat("en-US", { notation: "compact" }).format(
+                  stars,
+                )}
               </Link>
               <Link target="_blank" href={project.url}>
                 <Github

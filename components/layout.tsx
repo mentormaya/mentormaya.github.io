@@ -11,7 +11,6 @@ interface Props {
 
 const Layout = ({ children }: Props) => {
   const pathname = usePathname();
-  console.log('pathname', pathname)
   if (pathname === '/') {
     console.log('homepage')
     return children

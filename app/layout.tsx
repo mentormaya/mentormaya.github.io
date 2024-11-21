@@ -6,8 +6,6 @@ import { calSans } from "@/components/local-fonts";
 import { ThemeProvider } from "@/providers/theme";
 import { cn } from "@/lib/utils";
 import Particles from "@/components/particles";
-import { Navigation } from "@/components/nav";
-import Footer from "@/components/footer";
 import Layout from "@/components/layout";
 
 const title = "Ajay Singh";
