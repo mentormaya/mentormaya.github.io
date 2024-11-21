@@ -25,9 +25,9 @@ export const socialMedia = {
     handle: "admin@ajaysingh.com.np",
   },
   youtube: {
-    href: "https://www.youtube.com/@ajay__singh",
+    href: "https://www.youtube.com/@mentormaya",
     label: "YouTube",
-    handle: "ajay__singh",
+    handle: "mentormaya",
   },
   github: {
     handle: "mentormaya",
