@@ -1,6 +1,6 @@
 {
-  "name": "jekyll-theme",
-  "version": "0.1.0",
+  "name": "ajaysingh.com.np",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
