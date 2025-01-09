@@ -8,6 +8,7 @@ import { Card } from "@/components/card"; // Ensure you have the correct path fo
 import { Article } from "./article"; // Ensure you have the correct path for Article
 import { Project } from "@/types/github";
 import { fetchProjects } from "@/lib/projects";
+import { socialMedia } from "@/data/social";
 
 export default function ProjectsPage() {
   const {
@@ -33,10 +34,10 @@ export default function ProjectsPage() {
   }
 
   const featured = projects?.find(
-    (project) => project.name === "mentormaya.github.io"
+    (project) => project.name === socialMedia.github.domain
   )!;
   const top2 = projects?.find((project) => project.name === "blog")!;
-  const top3 = projects?.find((project) => project.name === "addons-example")!;
+  const top3 = projects?.find((project) => project.name === "portfolio-blog-theme")!;
   const sorted = projects
     ?.filter(
       (project) =>

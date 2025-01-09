@@ -1,4 +1,6 @@
-export const GIT_USERNAME = "mentormaya"; // Replace with your GitHub username
+import { socialMedia } from "@/data/social";
+
+export const GIT_USERNAME = socialMedia.github.handle; // Replace with your GitHub username
 
 export interface RepoOwner {
   login: string;

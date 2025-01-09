@@ -30,11 +30,11 @@ export const socialMedia = {
     handle: "mentormaya",
   },
   github: {
-    handle: "mentormaya",
+    handle: "ajaysinghnp",
     label: "Github",
-    href: "https://github.com/mentormaya",
-    domain: "mentormaya.github.io",
+    href: "https://github.com/ajaysinghnp",
+    domain: "ajaysinghnp.github.io",
     custom_domain: "ajaysingh.com.np",
-    theme: "https://github.com/mentormaya/portfolio-blog-theme",
+    theme: "https://github.com/ajaysinghnp/portfolio-blog-theme",
   },
 };
