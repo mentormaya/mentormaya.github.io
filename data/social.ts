@@ -2,22 +2,22 @@ export const socialMedia = {
   facebook: {
     href: "https://www.facebook.com/ajaykumarsingh.np",
     label: "Facebook",
-    handle: "@ajaykumarsingh.np",
+    handle: "@erajaysinghnp",
   },
   instagram: {
     href: "https://www.instagram.com/ajaykumarsingh.np",
     label: "Instagram",
-    handle: "@ajaykumarsingh.np",
+    handle: "@erajaysinghnp",
   },
   twitter: {
     href: "https://x.com/singh_ajaykumar",
     label: "Twitter",
-    handle: "@singh_ajaykumar",
+    handle: "@ajaysinghnp",
   },
   linkedin: {
     href: "https://linkedin.com/in/ajaysingh.com.np",
     label: "LinkedIn",
-    handle: "@singh_ajaykumar",
+    handle: "@ajaysinghnp",
   },
   email: {
     href: "mailto:admin@ajaysingh.com.np",
